@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//viscarcapacity.com/main-sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://viscarcapacity.com/events/</loc>
+		<lastmod>2026-11-02T11:38:11+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://viscarcapacity.com/events/fiber-toolkit/</loc>
+		<lastmod>2026-11-02T11:38:11+00:00</lastmod>
+		<image:image>
+			<image:loc>https://viscarcapacity.com/wp-content/uploads/2026/11/Webinar-01-scaled.jpg</image:loc>
+		</image:image>
+	</url>
+</urlset>

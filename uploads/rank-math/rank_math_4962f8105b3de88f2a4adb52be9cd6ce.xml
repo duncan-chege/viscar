@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//viscarcapacity.com/main-sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://viscarcapacity.com/controls-trainings/distributed-control-systems-training/</loc>
+		<lastmod>2025-11-17T09:49:54+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://viscarcapacity.com/controls-trainings/plc-level-1-level-2-and-advanced-training/</loc>
+		<lastmod>2025-11-17T09:24:29+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://viscarcapacity.com/controls-trainings/scada-systems-training-basic-and-advanced/</loc>
+		<lastmod>2025-11-17T08:21:12+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://viscarcapacity.com/controls-trainings/variable-frequency-drives-and-soft-starters-training/</loc>
+		<lastmod>2025-11-17T07:19:10+00:00</lastmod>
+	</url>
+</urlset>
