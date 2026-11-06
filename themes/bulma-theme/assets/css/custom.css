@@ -1,0 +1,3215 @@
+:root {
+  --blue: #000382;
+
+  --red: #d21619;
+
+  --dark-red: #ba080b;
+
+  --lightblue: #699bf724;
+
+  --lightred: #ed7173;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  outline: none;
+}
+
+a {
+  display: inline-block;
+
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: revert;
+}
+
+img {
+  height: auto;
+}
+
+h1 {
+  margin-top: 0;
+
+  font-size: 3rem;
+
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2.4rem;
+
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+h3 {
+  font-size: 1.8rem;
+
+  line-height: 1;
+}
+
+h4 {
+  font-size: 1.4rem;
+
+  line-height: 1;
+}
+
+h5 {
+  font-size: 1.2rem;
+
+  line-height: 1;
+}
+
+p {
+  margin: 1em 0;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+.blue-bg {
+  background: var(--blue) !important;
+}
+
+.red-bg {
+  background-color: var(--dark-red) !important;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+}
+
+/* HEADER */
+
+nav#primary-nav {
+  box-shadow: -5px -1px 4px 0px #6c6c6c;
+  z-index: 10;
+}
+
+.navbar-brand img {
+  width: 100%;
+  height: 50px;
+}
+
+.drop {
+  position: relative;
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.drop a:hover * {
+  color: #fff;
+}
+
+.drop img {
+  height: 27px;
+}
+
+.drop span {
+  position: relative;
+  bottom: 6px;
+  left: 5px;
+  font-size: 14px;
+}
+
+.drop-content {
+  display: none;
+  z-index: 100;
+}
+
+.drop-content a {
+  color: #000;
+  padding: 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.drop:hover .drop-content {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  margin-top: 2px;
+}
+
+a.navbar-item,
+.navbar-link {
+  color: var(--blue);
+  text-transform: capitalize;
+}
+
+a.navbar-item:hover {
+  color: var(--red);
+  background: #fff;
+}
+
+.navbar-link.is-active {
+  color: var(--red);
+}
+
+.scrolling-event {
+  width: 500px;
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+}
+
+.scrolling-event a:hover {
+  color: #fff;
+}
+
+.scrolling-event .text {
+  font-size: 15px;
+  animation: animate-text 10s linear infinite;
+  color: #a0d5fb;
+  font-weight: 900;
+}
+
+.scrolling-event .text span {
+  margin: 0 10px;
+}
+
+@keyframes animate-text {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.trainings-btn {
+  color: #fff;
+
+  font-size: 14px;
+
+  border-radius: 10px;
+
+  display: block;
+
+  background-color: var(--red);
+
+  transition: background-color 300ms;
+}
+
+.trainings-btn:hover {
+  color: #fff;
+}
+
+.trainings-btn:hover {
+  background-color: #fff;
+
+  color: var(--blue);
+}
+
+.trainings-btn:hover span.no {
+  background-color: var(--red);
+
+  color: #fff;
+}
+
+span.text {
+  padding: 8px 0 8px 12px;
+
+  display: inline-block;
+}
+
+span.no {
+  display: inline-block;
+
+  padding: 8px 12px 8px 8px;
+
+  background: var(--blue);
+}
+
+.button.search {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.navbar-menu {
+  justify-content: center;
+}
+
+.navbar-dropdown {
+  position: absolute;
+  background: #fff;
+  width: max-content;
+}
+
+.navbar-item.has-dropdown.is-hoverable {
+  padding: 0;
+}
+
+.navbar-dropdown .navbar-link {
+  padding-left: 15px;
+}
+
+.sub-menu {
+  top: -10px;
+  left: 230px;
+  background-color: #fff;
+}
+
+.navbar-dropdown .navbar-link:not(.is-arrowless)::after {
+  transform: rotate(227deg);
+}
+
+a.navbar-link {
+  width: 100%;
+}
+
+/* HOMEPAGE */
+.front-page-hero li.splide__slide {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.front-page-hero .splide__slide > div:first-child {
+  padding: 6em 3em 3em 7em;
+  color: var(--blue);
+  text-align: left;
+}
+
+/* Image column - fixed responsive height */
+.front-page-hero .splide__slide .column:not(:first-child) {
+  height: clamp(60vh, 15vh + 50vw, 80vh);
+}
+
+.front-page-hero .splide__slide h5 {
+  margin-top: 2em;
+}
+
+.front-page-hero .splide__slide a,
+.more-articles,
+.sub-services a,
+.filter-btn,
+.go-back a {
+  margin-top: 2em;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: var(--red);
+  border-radius: 10px;
+  transition: background-color 300ms;
+  border: none;
+}
+
+.front-page-hero .splide__slide a:hover,
+.more-articles:hover,
+.sub-services a:hover,
+.filter-btn:hover,
+.go-back a:hover {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+.front-page-hero .splide__slide img:not(.event-col-box img) {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.event-col-box {
+  position: relative;
+  height: 100%;
+}
+
+.event-col-box .outer-image {
+  height: 100%;
+  width: 100%;
+}
+
+.event-col-box .outer-image img {
+  filter: blur(3px) brightness(0.2);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.event-col-box .inner-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: auto;
+  max-height: 70%;
+  object-fit: contain;
+}
+
+.front-page-hero .splide__pagination {
+  bottom: 1.5em !important;
+  left: 7em !important;
+}
+
+.center-hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+button.splide__arrow {
+  width: 80px;
+  height: 80px;
+  background: #e4f3ff;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgb(0 0 0 / 2%);
+}
+
+.in-brief {
+  background: var(--lightblue);
+
+  color: var(--blue);
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  position: relative;
+}
+
+.brief-text {
+  padding: 6em 4em;
+}
+
+.brief-img {
+  background: url(../img/brief-img.png) var(--lightblue);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.desc {
+  padding: 6em 3em;
+}
+
+.vector > svg {
+  position: absolute;
+
+  bottom: 0;
+}
+
+.stats h2 {
+  color: var(--blue);
+  font-size: 3.5em;
+  padding-bottom: 15px;
+}
+
+.stats h4 {
+  color: var(--blue);
+
+  font-weight: 700;
+}
+
+.stats .column::after {
+  content: "";
+
+  display: block;
+
+  width: 50%;
+
+  margin: 0 auto;
+
+  padding-top: 30px;
+
+  border-bottom: 2px solid var(--blue);
+}
+
+.solutions,
+.services,
+.articles,
+.partners-section {
+  padding: 1em 3em 3em;
+}
+
+.solutions h2,
+.services h2,
+.articles h2,
+.partners-section h2 {
+  color: var(--red);
+  padding: 1.5em 0;
+  text-align: center;
+}
+
+.sol-block,
+.serv-block,
+.subsol-bloc {
+  padding: 1em;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  height: 250px;
+  position: relative;
+  box-shadow: -1px 2px 6px 0px #00000026;
+  transition: 0.4s ease;
+}
+
+.subsol-bloc {
+  height: auto;
+  padding: 0;
+  text-align: left;
+}
+
+.sol-block:hover,
+.serv-block:hover,
+.subsol-bloc:hover {
+  transform: translateY(-10px);
+}
+
+.serv-block::before,
+.serv-block::after,
+.subsol-bloc::before,
+.subsol-bloc::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--red);
+  height: 4px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.sol-block::before,
+.sol-block::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--blue);
+  height: 4px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.sol-block::before,
+.serv-block::before,
+.subsol-bloc::before {
+  width: 0;
+  opacity: 0;
+  transition:
+    opacity 0 ease,
+    width 0 ease;
+  transition-delay: 0.5s;
+}
+
+.sol-block::after,
+.serv-block::after,
+.subsol-bloc::after {
+  width: 100%;
+  background: #fff;
+  transition: width 0.5s ease;
+}
+
+.sol-block:hover::before,
+.serv-block:hover::before,
+.subsol-bloc:hover::before {
+  width: 100%;
+  opacity: 1;
+  transition:
+    opacity 0.5s ease,
+    width 0.5s ease;
+  transition-delay: 0;
+}
+
+.sol-block:hover::after,
+.serv-block:hover::after,
+.subsol-bloc:hover::after {
+  width: 0;
+  opacity: 0;
+  transition: width 0 ease;
+}
+
+.sol-block > div,
+.serv-block > div {
+  padding-top: 1em;
+}
+
+.sol-block h5,
+.serv-block h5 {
+  font-weight: 700;
+}
+
+.sol-block p,
+.serv-block p {
+  position: absolute;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  bottom: 20px;
+
+  line-height: 1;
+
+  border-bottom: 2px dashed;
+
+  padding-bottom: 5px;
+}
+
+.sol-block:hover h5,
+.sol-block:hover p {
+  color: var(--blue);
+}
+
+.subsol-bloc:hover p {
+  color: var(--red) !important;
+}
+
+.subsolution-links img {
+  height: 80px;
+}
+
+.serv-block {
+  color: var(--red);
+
+  width: 240px;
+}
+
+.serv-block img {
+  width: 130px;
+}
+
+.wires {
+  background: url(../img/colored-cables.svg) repeat-x;
+
+  height: 110px;
+
+  background-size: contain;
+}
+
+.trainings,
+.solution-courses {
+  background: var(--lightblue);
+
+  display: grid;
+
+  grid-template-columns: 40% 60%;
+
+  margin: 6em 0 0;
+}
+
+.trainings > div:first-child,
+.solution-courses > div:first-child {
+  background-image: url(../img/trainings-img.png);
+
+  background-size: cover;
+
+  min-height: 300px;
+
+  background-position-y: center;
+}
+
+.trainings-section {
+  padding-bottom: 3em;
+}
+
+.red-bg h2,
+.blue-bg h2 {
+  color: #fff;
+  padding: 1em 1em 0.5em 1em;
+  text-align: center;
+}
+
+.trainings h2 {
+  color: var(--blue);
+  padding: 1em;
+  text-align: center;
+}
+
+.trainings h5 {
+  font-weight: 700;
+  color: var(--blue);
+  text-transform: capitalize;
+}
+
+.trainings .is-half > div::after {
+  content: "";
+
+  display: block;
+
+  width: 50%;
+
+  border-bottom: 1px dashed var(--blue);
+}
+
+.training-date {
+  font-size: 15px;
+
+  margin: 10px 0;
+}
+
+.trainings-section p {
+  font-size: 15px;
+}
+
+.trainings-section a:hover {
+  background: #d5e4ff;
+}
+
+.trainings-section a:not(.more-trainings) {
+  padding: 10px 15px 0 10px;
+}
+
+.training-link {
+  border-bottom: 2px dashed;
+}
+
+.more-trainings {
+  background-color: var(--red);
+  border-radius: 10px;
+  color: #fff;
+  display: block;
+  padding: 10px 15px;
+  transition: background-color 300ms;
+  width: fit-content;
+  margin: 1em auto 0;
+}
+
+.more-trainings:hover {
+  background-color: var(--blue) !important;
+  color: #fff;
+}
+
+.card:hover a {
+  background-color: var(--blue);
+  transition: background-color 400ms;
+}
+
+.card:hover h3,
+.card:hover h4,
+.card:hover p {
+  color: #fff;
+  transition: background-color 400ms;
+}
+
+.card a {
+  width: 100%;
+}
+
+.card-content {
+  padding: 1em;
+}
+
+.card-content h3,
+.card-content h4,
+.card-content p {
+  color: var(--blue);
+  text-transform: capitalize;
+}
+
+.card-image img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.content a {
+  font-weight: 700;
+
+  font-size: 1.2em;
+
+  color: #3b3d97;
+}
+
+.content p {
+  padding-top: 1em;
+
+  text-align: left;
+
+  font-size: 15px;
+}
+
+.more-articles {
+  display: block;
+
+  text-align: center;
+
+  margin: 2em auto 0;
+
+  width: 140px;
+}
+
+.grid-container {
+  overflow: hidden;
+}
+
+.grid-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  animation: slideAnimation 25s linear infinite;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+}
+
+.grid-column {
+  flex: 0 0 20%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ABOUT PAGE */
+
+.page-hero-section {
+  background: rgb(235, 39, 43);
+  background: linear-gradient(
+    59deg,
+    rgba(235, 39, 43, 1) 0%,
+    rgba(172, 47, 19, 1) 35%,
+    rgba(20, 52, 177, 1) 100%
+  );
+  height: 43vh;
+  position: relative;
+}
+
+.page-hero-section > img {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 100%;
+}
+
+.page-hero-section > h1 {
+  text-align: center;
+
+  padding-top: 1.5em;
+
+  color: #fff;
+
+  text-transform: capitalize;
+}
+
+.who-section,
+.milestones,
+.solution-section,
+.optical-solutions,
+.cloud-environments,
+.five-g,
+.wireless-solutions,
+.cloud-services,
+.hq-section,
+.regional-offices,
+.wah-equipment,
+.support-center,
+.error-section {
+  margin: 3em;
+}
+
+.iot-solutions > div {
+  margin: 5em 4em;
+}
+
+.who-section h2,
+.solution-section h2,
+.optical-solutions h3,
+.five-g h3,
+.wireless-solutions h3,
+.iot-solutions h3 {
+  color: var(--red);
+  display: inline-block;
+}
+
+.optical-solutions h3,
+.industrial-iot h3,
+.five-g h3,
+.wireless-solutions h3,
+.iot-solutions h3,
+.iot-trainings h3 {
+  font-weight: 900;
+}
+
+.who-section h2::after {
+  content: "";
+  display: block;
+  margin: 0;
+  width: 50%;
+  padding-top: 10px;
+  border-bottom: 4px solid var(--red);
+}
+
+.who-section p,
+.solution-section p,
+.solution-section ol,
+.optical-solutions p,
+.five-g p,
+.wireless-solutions p,
+.cyber-security p,
+.cloud-environments p,
+.process-audit p,
+.process-overview p {
+  margin: 1em 2em 1em 0;
+  color: var(--blue);
+}
+
+.origin-img,
+.leadership-img,
+.digital-transformation-img,
+.process-optimization-img,
+.safety-engineering-img,
+.optical-img,
+.five-g-img,
+.wireless-img,
+.cyber-security-img,
+.industrial-iot-img,
+.agriculture-iot-img,
+.automated-metering-img,
+.transport-iot-img,
+.smart-city-iot-img,
+.cloud-environments-img,
+.doc-management-img,
+.managed-cloud-img,
+.disaster-recovery-img,
+.managed-hosting-img,
+.managed-storage-img,
+.cloud-migration-img,
+.monitoring-management-img,
+.process-approach-img,
+.process-audit-img,
+.process-overview-img,
+.energy-opp-img,
+.energy-details-img,
+.wah-img,
+.fire-safety-img,
+.construction-img,
+.electrical-safety-img,
+.fluid-power-img,
+.automation-visual,
+.pneumatic-kit-img,
+.project-automation,
+.industrial-conrols-img,
+.energy-safety-img,
+.occ-safety-img,
+.broadband-img,
+.fiber-cable-img,
+.telecoms-training-img,
+.telecoms-managed-img,
+.page-missing-img,
+.iot-img {
+  background-image: url(../img/staff-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px;
+}
+
+.page-missing-img {
+  background-image: url(../img/sad-engineer.png);
+  background-size: auto;
+  background-position-x: center;
+}
+
+.telecoms-managed-img {
+  background-image: url(../img/telecom-workers.jpg);
+}
+
+.telecoms-training-img {
+  background-image: url(../img/telecoms-training.png);
+}
+
+.fiber-cable-img {
+  background-image: url(../img/fiber-cable.png);
+}
+
+.broadband-img {
+  background-image: url(../img/broadband.png);
+}
+
+.occ-safety-img {
+  background-image: url(../img/occupational-safety.png);
+  background-position-y: bottom;
+}
+
+.energy-safety-img {
+  background-image: url(../img/fuse-box.png);
+}
+
+.industrial-conrols-img {
+  background-image: url(../img/industrial-controls.png);
+}
+
+.project-automation {
+  background-image: url(../img/installation-automation.jpg);
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.pneumatic-kit-img {
+  background-image: url(../img/pneumatic-kit.png);
+}
+
+.automation-visual {
+  background-image: url(../img/didatic-equipment.png);
+}
+
+.fluid-power-img {
+  background-image: url(../img/fluid-power.png);
+}
+
+.electrical-safety-img {
+  background-image: url(../img/electrical-safety.png);
+}
+
+.construction-img {
+  background-image: url(../img/construction-worker.png);
+}
+
+.fire-safety-img {
+  background-image: url(../img/firefighter.png);
+}
+
+.wah-img {
+  background-image: url(../img/wah.png);
+}
+
+.energy-savings-img {
+  background-image: url(../img/energy-savings.png);
+  background-repeat: no-repeat;
+}
+
+.energy-opp-img {
+  background-image: url(../img/energy-opportunities.png);
+}
+
+.process-overview-img {
+  background-image: url(../img/process-overview.png);
+  background-position-y: center;
+}
+
+.process-audit-img {
+  background-image: url(../img/process-audit.png);
+}
+
+.process-approach-img {
+  background-image: url(../img/process-approach.png);
+}
+
+.iot-img {
+  background-image: url(../img/iot-img.jpg);
+  background-position-x: 20%;
+}
+
+.cyber-sec-img {
+  background-image: url(../img/cyber-sec.jpg);
+}
+
+.data-center-img {
+  background-image: url(../img/data-center.jpg);
+}
+
+.telecomm-img {
+  background-image: url(../img/telecomms-img.jpg);
+}
+
+.monitoring-management-img {
+  background-image: url(../img/monitoring-management-img.jpg);
+  background-position-x: center;
+  background-size: auto;
+}
+
+.cloud-migration-img {
+  background-image: url(../img/cloud-migration-img.jpg);
+  background-position-x: center;
+  background-size: auto;
+}
+
+.managed-storage-img {
+  background-image: url(../img/managed-storage-img.jpg);
+  background-position-x: center;
+  background-size: auto;
+}
+
+.managed-hosting-img {
+  background-image: url(../img/managed-hosting-img.jpg);
+  background-position-x: center;
+  background-size: auto;
+}
+
+.disaster-recovery-img {
+  background-image: url(../img/disaster-recovery-img.jpg);
+  background-size: auto;
+  background-position-x: center;
+}
+
+.managed-cloud-img {
+  background-image: url(../img/managed-cloud.jpg);
+  background-size: auto;
+  background-position-x: center;
+}
+
+.doc-management-img {
+  background-image: url(../img/document-management-img.png);
+  background-size: contain;
+  background-position-x: center;
+}
+
+.cloud-environments-img {
+  background-image: url(../img/cloud-environment.jpg);
+}
+
+.smart-city-iot-img {
+  background-image: url(../img/smart-city-iot-img.jpg);
+  background-position-y: bottom;
+}
+
+.transport-iot-img {
+  background-image: url(../img/transport-iot.jpg);
+}
+
+.industrial-iot-img {
+  background-image: url(../img/industrial-iot-img.jpg);
+  background-position-y: bottom;
+}
+
+.agriculture-iot-img {
+  background-image: url(../img/agriculture-iot-img.jpg);
+  background-position-y: bottom;
+}
+
+.leadership-img {
+  background-image: url(../img/leadership-engineering.png);
+  min-height: 300px;
+}
+
+.digital-transformation-img {
+  background-image: url(../img/neon-circuit.png);
+  background-position-y: 80%;
+}
+
+.industrial-automation-img {
+  background-image: url(../img/automation-background.png);
+  background-position-y: 80%;
+  background-position-x: 95%;
+}
+
+.machine-parts-img {
+  background-image: url(../img/machine-parts.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  min-height: 300px;
+}
+
+.automated-metering-img {
+  background-image: url(../img/automated-metering-img.jpg);
+}
+
+.process-optimization-img {
+  background-image: url(../img/process-optimization.jpeg);
+  background-position-x: center;
+}
+
+.safety-engineering-img {
+  background-image: url(../img/safety-gear.png);
+}
+
+.optical-img {
+  background-image: url(../img/optical-img.png);
+  background-position-y: bottom;
+}
+
+.five-g-img {
+  background-image: url(../img/five-g-img.jpg);
+  background-position-y: center;
+}
+
+.wireless-img {
+  background-image: url(../img/wireless-img.png);
+}
+
+.cyber-security-img {
+  background-image: url(../img/cyber-sec-bg.png);
+}
+
+.triangle-vector {
+  width: 100%;
+}
+
+.vision-mission {
+  background: url(../img/vison-bg.png) #2a416a;
+
+  background-size: cover;
+
+  background-attachment: fixed;
+
+  margin: 5em 0;
+
+  padding: 0 2em;
+}
+
+.vision-mission .columns {
+  padding: 8em 0;
+}
+
+.mission,
+.vision,
+.brand-promise {
+  background: #fff;
+
+  padding: 1.5em;
+
+  border-radius: 10px 10px 0 0;
+
+  height: 250px;
+}
+
+.vision-mission p {
+  padding-top: 1em;
+}
+
+.image-breaks img {
+  object-fit: cover;
+}
+
+.image-breaks {
+  margin-bottom: 7em;
+}
+
+.milestones h2,
+.testimonials h2 {
+  text-align: center;
+
+  color: var(--blue);
+
+  margin: 2em 0 1em;
+}
+
+.tabs ul {
+  border: none;
+}
+
+.tabs a {
+  font-size: 1.5em;
+
+  color: var(--lightred);
+}
+
+.tabs.is-boxed li.is-active a {
+  background: var(--lightblue);
+}
+
+.tabs li.is-active a {
+  color: var(--red);
+
+  font-weight: 900;
+}
+
+#tab-content > div {
+  background: var(--lightblue);
+
+  padding: 1em 2em;
+}
+
+.choose-us {
+  background: url(../img/chosen-bg.png) #0624b9;
+
+  background-attachment: fixed;
+
+  margin: 5em 0;
+
+  padding: 0 3em 5em 3em;
+}
+
+.choose-us h2 {
+  color: #fff;
+
+  margin: 2em 0;
+}
+
+.choose-us .pill {
+  padding: 3em;
+
+  position: relative;
+
+  color: #fff;
+
+  border-radius: 10px;
+
+  height: 130px;
+}
+
+.pill.blue {
+  background: #699bf7;
+}
+
+.pill.red {
+  background: #ed7173;
+}
+
+.pill img {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 55px;
+}
+
+.feedback {
+  margin: 4em 0;
+}
+
+.feedback .splide__slide {
+  margin: 0 1em;
+
+  border-radius: 10px;
+
+  padding: 0.5em 1em 2em 1em;
+
+  max-width: max-content;
+
+  min-width: 300px;
+
+  height: 100%;
+}
+
+.feedback .splide__slide:nth-child(odd) {
+  background-color: rgba(252, 166, 168, 0.21);
+}
+
+.feedback .splide__slide:nth-child(even) {
+  background-color: rgba(105, 155, 247, 0.54);
+}
+
+.feedback .role {
+  font-size: 0.9rem;
+
+  margin: 0;
+}
+
+/* PROJECTS PAGE */
+
+.projects-section {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-rows: 1fr 1fr;
+
+  column-gap: 3rem;
+
+  margin: 3em 3em;
+}
+
+.project-block {
+  position: relative;
+
+  margin-bottom: 3em;
+
+  overflow: hidden;
+}
+
+.project-block:hover h4 {
+  color: var(--red);
+}
+
+.project-block:hover img {
+  transform: scale(1.2);
+}
+
+.projects-section img {
+  height: 350px;
+
+  object-fit: cover;
+
+  transition: all 0.4s ease-in-out;
+}
+
+.projects-section h4 {
+  color: var(--blue);
+
+  position: absolute;
+
+  bottom: 0;
+
+  margin: 10px 10px 0;
+
+  background: #fff;
+
+  padding: 12px 16px;
+
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  text-transform: capitalize;
+}
+
+/* ARTICLES PAGE */
+
+.articles-heading {
+  color: var(--red);
+
+  font-weight: 900;
+
+  margin: 3em 0 0;
+}
+
+.articles-bloc,
+.courses-bloc {
+  margin: 3em 10em;
+}
+
+.filter-section {
+  display: flex;
+  margin: 2em 0 1em;
+  align-items: center;
+}
+
+.filter-section p {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.filter-btn {
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* SINGLE PAGE */
+
+.single-title {
+  border-bottom: 8px solid transparent;
+
+  border-image: linear-gradient(
+    0.25turn,
+    rgba(235, 39, 43, 1) 0%,
+    rgba(172, 47, 19, 1) 35%,
+    rgba(20, 52, 177, 1) 100%
+  );
+
+  border-image-slice: 1;
+
+  color: var(--blue);
+
+  font-size: 2.6em;
+
+  margin: 1.1em 0;
+
+  text-transform: capitalize;
+
+  width: 100%;
+}
+
+.single-block h2 {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.single-block h3,
+.single-block h4,
+.single-block h5 {
+  font-weight: 700;
+  margin: 1em 0;
+}
+
+.single-block a {
+  color: var(--blue);
+  border-bottom: 2px dashed;
+}
+
+.single-block img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#load-more-btn {
+  display: block;
+  margin: 2em auto 4em auto;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: var(--red);
+  border-radius: 10px;
+  transition: background-color 300ms;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+}
+
+#load-more-btn:hover {
+  background-color: var(--blue);
+}
+
+/* SOLUTION SECTION */
+
+.solution-section h3 {
+  color: var(--blue);
+
+  font-weight: 900;
+
+  margin: 0.8em 0;
+}
+
+.soluton-section ul {
+  padding-left: 20px;
+
+  color: var(--blue);
+}
+
+p.subsolution-title {
+  color: var(--red);
+  font-size: 1.4em;
+  font-weight: 700;
+  margin: 1em 0 1em;
+  text-align: center;
+  line-height: 1;
+}
+
+.subsolution-links {
+  display: flex;
+  background: #fff;
+  padding: 2em;
+  box-shadow: 3px 1px 14px 0px #dddcdc;
+}
+
+.subsolution-links > div {
+  padding-left: 20px;
+}
+
+.subsolution-links > div p:first-child {
+  font-weight: 700;
+  font-size: 1.2em;
+  line-height: 1;
+  color: var(--blue);
+  margin: 0 0 15px 0;
+}
+
+.subsolution-links > div p:last-child {
+  margin: 0;
+  color: var(--blue);
+  border-bottom: 2px dashed;
+  width: fit-content;
+  font-size: 0.9em;
+}
+
+.selection-group p {
+  color: #4f4f4f;
+}
+
+.selection-group h4 {
+  color: var(--blue);
+
+  font-weight: 700;
+}
+
+.solution-section .column:not(:first-child) {
+  padding-bottom: 3em !important;
+}
+
+.selection-group {
+  padding: 2em;
+  box-shadow: 0px -1px 11px 2px #d7d5d594;
+}
+
+.selection-group a {
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 15px;
+  background: var(--blue);
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.selection-group a:hover {
+  background-color: var(--red);
+}
+
+.solution-courses > div:first-child,
+.course-img {
+  background-image: url(../img/student-learning.jpg);
+  background-position-y: bottom;
+}
+
+.solution-courses-block {
+  margin: 0 0 4em 0;
+}
+
+.solution-courses-block p {
+  color: #fff;
+  text-align: center;
+  font-size: 1.1em;
+  margin: 0 2em 2em;
+  line-height: 1.2;
+}
+
+.training-courses > div:last-child {
+  background-image: url(../img/student-learning.png);
+}
+
+.red-links .course-name {
+  color: #fdf4d9;
+  line-height: 1;
+}
+
+.red-links .course-name:hover h5,
+.red-links .course-name:hover i,
+.blue-links .course-name:hover h5,
+.blue-links .course-name:hover i,
+.iot-trainings .course-name a:hover {
+  color: #fff;
+}
+
+.blue-links .course-name,
+.blue-links h5 {
+  color: #adcaff;
+  width: fit-content;
+}
+
+.red-bg i,
+.blue-bg i {
+  padding-right: 0.5em;
+  font-size: 1.1rem;
+}
+
+.red-links h5,
+.blue-links h5 {
+  font-size: 1.1em;
+  text-transform: capitalize;
+}
+
+.red-links a::after,
+.blue-links a::after,
+.iot-trainings a::after {
+  content: "";
+  display: block;
+  border-bottom: 2px dashed #fdf4d9;
+  margin-top: 5px;
+  margin-left: 25px;
+}
+
+.blue-links a::after {
+  border-bottom: 2px dashed #adcaff;
+}
+
+.extra-courses .course-name::after {
+  content: "";
+  display: block;
+  border-bottom: 2px dashed #006bd7;
+  margin-left: 25px;
+}
+
+.red-links a:hover::after,
+.blue-links a:hover::after,
+.iot-trainings a:hover::after {
+  border-bottom: 2px dashed #fff;
+}
+
+.updating {
+  text-align: center;
+  width: 100%;
+  font-weight: 900;
+  padding: 2em 2em 1em;
+}
+
+.loader-line {
+  width: 250px;
+  height: 3px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ed7173;
+  margin: 1em auto;
+  border-radius: 20px;
+}
+
+.loader-line::before {
+  border-radius: 20px;
+  content: "";
+  position: absolute;
+  left: -50%;
+  height: 3px;
+  width: 40%;
+  background-color: #fdf4d9;
+  animation: linAnim 1s linear infinite;
+  -webkit-animation: lineAnim 1s linear infinite;
+  -moz-animation: lineAnim 1s linear infinite;
+}
+
+@keyframes lineAnim {
+  0% {
+    left: -40%;
+  }
+
+  50% {
+    left: 20%;
+    width: 80%;
+  }
+
+  100% {
+    left: 100%;
+    width: 100%;
+  }
+}
+
+.extra-courses {
+  margin: 5em 3em;
+}
+
+.extra-courses .course-name {
+  display: block;
+  margin: 0 0 2em;
+  font-size: 1.1em;
+  color: #006bd7;
+  width: fit-content;
+}
+
+/* SUBSOLUTION SECTION */
+.subsolution-section {
+  margin: 3em 7em 3em 3em;
+}
+
+.subsolution-section p {
+  color: var(--blue);
+  padding-right: 1rem;
+}
+
+.floating-contact {
+  position: fixed;
+  right: 0;
+  background: var(--blue);
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  display: inline-block;
+  padding: 8px;
+  transition: 0.2s ease;
+}
+
+.floating-contact:hover {
+  background: var(--red);
+  color: #fff;
+}
+
+/* MANUFACTURING PROCESS PAGE */
+.process-audit,
+.process-overview {
+  margin: 0 7em 3em 3em;
+}
+
+.process-audit h3,
+.process-overview h3,
+.energy-efficiency h3,
+.energy-audits h3,
+.energy-audits h4 {
+  color: var(--blue);
+  font-weight: 900;
+}
+
+.process-audit li {
+  color: var(--blue);
+}
+
+.overview-details {
+  padding-left: 2em;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion::after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active::after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.process-audit ul:not(.audit-list) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.blue-links h3,
+.red-links h3 {
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  font-weight: 900;
+}
+
+/* ENERGY EFFICIENCY PAGE */
+
+.energy-efficiency,
+.energy-audits {
+  color: var(--blue);
+  margin: 4em 3em;
+}
+
+.performance-evaluations h4 {
+  font-weight: 900;
+  color: #fdf4d9;
+}
+
+.performance-evaluations {
+  padding: 3em;
+  color: #fff;
+}
+
+.energy-efficiency img {
+  height: 80px;
+}
+
+/* BREADCRUMBS */
+
+.breadcrumb-section p {
+  margin: 0;
+  padding: 12px;
+}
+
+.breadcrumb-section {
+  background: var(--blue);
+  color: #fff;
+  text-align: center;
+}
+
+.breadcrumb-section a:hover {
+  color: #a2c8f9;
+}
+
+/* TRAININGS PAGE */
+.trainings-block {
+  margin: 3em 10em;
+}
+
+.trainings-block img {
+  height: 250px;
+
+  object-fit: cover;
+}
+
+.trainings-block h4 {
+  font-weight: 700;
+
+  color: var(--blue);
+
+  padding: 10px 0 10px 15px;
+
+  font-size: 1.3em;
+
+  transition: color 0.5s cubic-bezier(0.68, 0.05, 0.21, 1.13);
+}
+
+.trainings-block p {
+  padding: 0 0 0 15px;
+
+  color: #7a7a7a;
+
+  bottom: 0;
+
+  position: absolute;
+
+  font-size: 15px;
+}
+
+.trainings-block a:hover h4 {
+  color: var(--red);
+}
+
+.name-date {
+  box-shadow: 0px 2px 5px 0px #d2d2d2;
+
+  margin-top: -7px;
+
+  min-height: 130px;
+
+  padding: 0;
+
+  position: relative;
+}
+
+.name-date div {
+  position: absolute;
+
+  background: var(--blue);
+
+  bottom: 0;
+
+  right: 0;
+
+  padding: 5px 10px;
+}
+
+.soon-trainings {
+  text-align: center;
+
+  margin: 3em 0 1em;
+
+  font-weight: 900;
+
+  color: var(--blue);
+
+  width: 100%;
+}
+
+.loader-line.trainings {
+  background-color: #71b9ed;
+
+  margin: 1em auto 7em;
+}
+
+.loader-line.trainings::before {
+  background-color: #1b3f8b;
+}
+
+/* SINGLE TRAINING */
+
+.training-poster > img {
+  height: auto;
+
+  object-fit: contain;
+}
+
+.single-training-title {
+  position: relative;
+
+  font-size: 3rem;
+
+  padding: 1em 0;
+
+  color: var(--blue);
+}
+
+.single-training-title::after {
+  content: "";
+
+  display: block;
+
+  margin: 0 auto;
+
+  width: 50%;
+
+  padding-top: 20px;
+
+  border-bottom: 8px solid transparent;
+
+  border-image: linear-gradient(
+    0.25turn,
+    rgba(235, 39, 43, 1) 0%,
+    rgba(172, 47, 19, 1) 35%,
+    rgba(20, 52, 177, 1) 100%
+  );
+
+  border-image-slice: 1;
+}
+
+.training-buttons {
+  display: flex;
+
+  justify-content: space-around;
+
+  flex-wrap: nowrap;
+
+  margin: 1em 0;
+}
+
+.back-trainings,
+.register {
+  background-color: var(--blue);
+  color: #fff !important;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 15px;
+  border: 2px solid !important;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.back-trainings:hover {
+  background-color: #fff !important;
+  color: var(--blue) !important;
+  /* border-bottom: 2px solid !important; */
+}
+
+.register {
+  background-color: var(--red);
+  border: 2px solid var(--red);
+  cursor: pointer;
+}
+
+.register:hover {
+  background-color: #fff !important;
+  color: var(--red) !important;
+  /* border-bottom: 2px solid !important; */
+}
+
+.training-prompts {
+  height: 100%;
+
+  position: sticky;
+
+  top: 0;
+}
+
+.training-meta {
+  display: flex;
+
+  justify-content: space-evenly;
+
+  font-weight: 700;
+
+  border-top: 2px dashed;
+
+  margin-top: 2em;
+}
+
+.popup {
+  display: none;
+
+  z-index: 1000;
+
+  overflow: hidden;
+
+  position: fixed;
+
+  justify-content: flex-end;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: rgba(51, 51, 51, 0.4);
+}
+
+.popup-content {
+  background: white;
+
+  overflow-y: scroll;
+
+  width: 50%;
+
+  padding: 4em 8em;
+
+  height: 100%;
+}
+
+.no-scroll {
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
+
+.close-btn {
+  border: 0.6px solid #000;
+
+  position: absolute;
+
+  top: 1.5rem;
+
+  right: 2rem;
+
+  font-size: 2rem;
+
+  cursor: pointer;
+
+  padding: 5px;
+
+  transition: 0.5s ease all;
+
+  line-height: 1;
+}
+
+.close-btn:hover {
+  background-color: var(--blue);
+
+  color: #fff;
+}
+
+.register-btn {
+  background-color: var(--blue) !important;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+a.wp-block-file__button.wp-element-button {
+  color: #fff;
+  border-bottom: none;
+}
+
+/* SINGLE COURSE */
+
+.sidebar {
+  height: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.single-block,
+.single-course-block {
+  margin: 3em 0 3em 3em;
+  padding: 0 3em;
+}
+
+.vertical-subscribe {
+  padding: 1em 0;
+  background-color: #171aa4;
+  color: #fff;
+  position: sticky;
+  top: 0;
+}
+
+.vertical-subscribe * {
+  text-align: center;
+}
+
+.vertical-subscribe h3 {
+  font-weight: 900;
+}
+
+.vertical-subscribe .mail-form {
+  display: block;
+  color: #fff;
+  margin: 1em 0;
+}
+
+.vertical-subscribe .mail-form input[type="email"],
+.vertical-subscribe .mail-form input[type="text"] {
+  margin: 0 0 10px;
+  width: 80%;
+}
+
+.vertical-subscribe .mail-form label {
+  text-align: center;
+  padding: 0 0 10px 0;
+}
+
+.back-to-solution,
+.course-contact {
+  background: #fff;
+
+  padding: 2em;
+
+  margin-top: 2em;
+
+  box-shadow: -1px 0px 4px 0px #c0bbbb;
+}
+
+.sidebar a {
+  display: block;
+}
+
+a > .back-to-solution,
+a > .course-contact {
+  background-color: #fff;
+
+  color: var(--blue);
+
+  font-weight: 700;
+
+  transition: background-color 500ms;
+}
+
+a > .back-to-solution:hover,
+a > .course-contact:hover {
+  background: var(--blue);
+
+  color: #fff;
+}
+
+.previous-page {
+  display: table; /* own line, but only as wide as the text so the dashed border stays short */
+
+  clear: both;
+
+  border-bottom: 2px dashed;
+
+  margin: 1em 0;
+
+  color: var(--blue);
+
+  font-weight: 600;
+}
+
+ul ul {
+  padding-left: 1.5em;
+}
+
+.ead-preview {
+  position: relative;
+
+  margin-top: 3em;
+}
+
+p.embed_download {
+  position: absolute;
+
+  top: -5em;
+
+  margin: 0;
+
+  right: 0;
+}
+
+p.embed_download > a {
+  background-color: var(--red);
+
+  padding: 10px 15px;
+
+  color: #fff;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  transition: background-color 300ms;
+}
+
+p.embed_download > a:hover {
+  background: var(--blue);
+}
+
+/* PROCESS PAGE */
+
+.process-programs {
+  margin-bottom: 4em;
+}
+
+.training-solutions,
+.energy-effcient {
+  padding: 0 3em 5em;
+  margin-bottom: 6em;
+}
+
+.process-btn,
+.energy-btn,
+.fiber-btn,
+.cellular-btn {
+  padding: 8px 10px 8px 20px;
+  font-size: 1em;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: var(--blue);
+  font-weight: 700;
+  font-family: "Mulish";
+  cursor: pointer;
+}
+
+.fiber-btn,
+.cellular-btn {
+  background-color: var(--red);
+  color: #fdf4d9;
+  border: 2px solid;
+}
+
+.process-btn:hover,
+.energy-btn:hover {
+  background: #adcaff;
+  color: var(--blue);
+  border: 2px solid;
+}
+
+.fiber-btn:hover,
+.cellular-btn:hover {
+  background: #fdf4d9;
+  color: var(--red);
+  border: 2px solid;
+}
+
+.process-btn.active,
+.energy-btn.active {
+  background: #adcaff;
+  color: var(--blue);
+  border: 2px solid;
+}
+
+.fiber-btn.active,
+.cellular-btn.active {
+  background: #fdf4d9;
+  color: var(--red);
+  border: 2px solid;
+}
+
+.process-bloc,
+.energy-bloc {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.fiber-bloc,
+.cellular-bloc,
+.consultancy-bloc,
+.safety-bloc {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.process-bloc > div,
+.energy-bloc > div,
+.fiber-bloc > div,
+.cellular-bloc > div,
+.consultancy-bloc > div,
+.safety-bloc > div {
+  padding: 1.2em;
+}
+
+.process-programs h3 {
+  color: var(--blue);
+  font-weight: 900;
+  text-align: center;
+  font-size: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+.institution-name {
+  border-bottom: 2px dashed;
+  color: #0b71ff;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-left: 50%;
+  text-align: center;
+}
+
+.institution-details {
+  display: flex;
+}
+
+.institution-details h5 {
+  color: var(--blue);
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.energy-efficient h2 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.energy-projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1200px;
+  margin: 2em auto 0;
+  padding-bottom: 4em;
+}
+
+.energy-projects > div {
+  padding: 1em;
+}
+
+.institution-details img {
+  height: 100px;
+  object-fit: contain;
+}
+
+/* AUTOMATION PAGE */
+
+.support-center h3 {
+  color: var(--blue);
+  font-weight: 900;
+  text-align: center;
+}
+
+.support-center p {
+  color: var(--blue);
+}
+
+.support-center .column:last-child,
+.technical-center .column:last-child {
+  background-image: url(../img/support-center.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px;
+}
+
+.technical-center .column:last-child {
+  background-image: url(../img/technical-center.png);
+  background-position-y: 50%;
+}
+
+.services-offered {
+  background: url(../img/steel-pipelines-cables-plant.png) #042484;
+  background-attachment: fixed;
+  padding-bottom: 4em;
+  margin-bottom: 4em;
+}
+
+.services-offered h3 {
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  padding: 2em;
+}
+
+.services-offered .columns {
+  padding: 0 3em;
+}
+
+.equipment-repair,
+.fire-safety-equipment {
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 2em 2em 2em 3em;
+  box-shadow: -1px 2px 12px 0px #d2d1d1;
+}
+
+.equipment-repair h4,
+.design-automation h4,
+.electrical-equipment h4,
+.installation-automation h4,
+.automation-projects h4,
+.wah-equipment h4,
+.fire-safety-equipment h4,
+.extra-courses h4,
+.safety-services h4,
+.consultancy-services h4,
+.consultancy-supply h4 {
+  font-weight: 900;
+}
+
+.equipment-repair ul,
+.installation-automation h4,
+.installation-automation ul,
+.wah-equipment ul,
+.fire-safety-equipment ul {
+  color: var(--blue);
+}
+
+.design-automation,
+.electrical-equipment {
+  background-color: #be3538;
+  padding: 2em;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.design-automation ul,
+.electrical-equipment ul {
+  color: #fdf4d9;
+}
+
+.installation-automation {
+  background-color: #ccdeff;
+  border-radius: 10px;
+  padding: 3em;
+}
+
+.automation-projects {
+  padding: 3em;
+  background: rgba(252, 166, 168, 0.21);
+  border-radius: 10px;
+  margin-left: 2em;
+}
+
+.automation-projects h4 {
+  color: var(--red);
+}
+
+.partnerships {
+  margin: 6em 0;
+}
+
+.partnerships h3 {
+  color: var(--red);
+  text-align: center;
+  font-weight: 900;
+}
+
+.partnerships img {
+  height: 90px;
+  object-fit: contain;
+}
+
+.partnerships a:hover {
+  filter: drop-shadow(2px 4px 6px #d0d0d0);
+}
+
+/* INDUSTRIAL AUTOMATION PAGE */
+.safety-services ul,
+.consultancy-services ul {
+  color: var(--blue);
+}
+
+.partnerships .splide__slide {
+  text-align: center;
+}
+
+.support-center-services {
+  margin: 0 3em;
+}
+
+/* OCCUPATIONAL HEALTH PAGE */
+
+.occupational-consultancy > div:first-child {
+  background-image: url(../img/consultancy-img.png);
+  background-position-y: bottom;
+  background-position-x: right;
+}
+
+/* SAFTEY ENGINEERING PAGE */
+.safety-services,
+.consultancy-services {
+  margin: 5em 3em 4em;
+}
+
+.safety-equipment h3 {
+  color: var(--red);
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.wah-block,
+.electrical-block,
+.fire-safety-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em 3em;
+}
+
+.electrical-equipment,
+.fire-safety-equipment {
+  width: 600px;
+}
+
+.fire-safety-equipment {
+  background: var(--lightblue);
+  color: var(--blue);
+  box-shadow: none;
+}
+
+.img-block {
+  display: block;
+  margin: 0 auto;
+}
+
+/* FIRE SAFETY PAGE */
+.consultancy-supply ul {
+  color: var(--blue);
+}
+
+.consultancy-supply {
+  margin: 4em;
+}
+
+/* CONTACTS PAGE */
+.contacts-title {
+  margin: 2em;
+  text-align: center;
+  font-weight: 900;
+  color: var(--blue);
+}
+
+.hq-section h5,
+.regional-offices h5 {
+  font-weight: 900;
+  margin: 2em 2em 1em;
+}
+
+.hq-section p,
+.regional-offices p {
+  color: var(--blue);
+}
+
+.main-hq h3,
+.main-hq p {
+  color: #fff !important;
+}
+
+.location-section h5,
+.map-location h5 {
+  font-weight: 900;
+
+  margin: 1em 0;
+
+  text-align: center;
+}
+
+.location-bloc {
+  background-color: #dde9ff;
+
+  text-align: center;
+
+  padding: 2em;
+
+  min-width: 360px;
+}
+
+.location-section h4 {
+  color: var(--blue);
+
+  font-weight: 900;
+}
+
+.location-section p {
+  color: var(--blue);
+}
+
+.office-location,
+.reach-out h3 {
+  font-weight: 900;
+
+  color: var(--blue);
+}
+
+.reach-out {
+  margin: 6em 4em;
+}
+
+.reach-out a,
+.reach-out p {
+  color: var(--blue);
+
+  font-size: 1.1em;
+}
+
+.reach-out a {
+  border-bottom: 2px dashed;
+}
+
+.reach-out a:hover {
+  color: var(--red);
+}
+
+.map-responsive {
+  overflow: hidden;
+
+  padding-bottom: 30%;
+
+  position: relative;
+
+  height: 340px;
+
+  margin-top: 2em;
+}
+
+.map-responsive iframe {
+  left: 0;
+
+  top: 0;
+
+  height: 100%;
+
+  width: 100%;
+
+  position: absolute;
+}
+
+/* SUBSCRIBE SECTION */
+
+.subscribe-section {
+  background-color: var(--blue);
+  padding: 3em;
+}
+
+.subscribe-section h2,
+.subscribe-section p {
+  color: #fff;
+}
+
+.mail-form {
+  font-size: 1em;
+  color: #fff;
+  display: flex;
+  margin: 2em 0 0;
+}
+
+.mail-form label {
+  padding-left: 1em;
+  display: block;
+  text-align: end;
+}
+
+.mail-form input[type="email"],
+.mail-form input[type="text"] {
+  margin-left: 1em;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background-color: #ddecff;
+  border: none;
+  color: var(--blue);
+  outline: none;
+}
+
+.submit-btn {
+  text-align: center;
+  margin: 1.5em;
+}
+
+.submit-btn input[type="submit"] {
+  cursor: pointer;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: var(--red);
+  border-radius: 5px;
+  font-size: 1em;
+  border: none;
+  outline: none;
+}
+
+.submit-btn input[type="submit"]:hover {
+  background-color: #fff;
+  color: var(--blue);
+}
+
+/* TELECOMMUNICATIONS PAGE */
+
+.solution-list,
+.five-g-list,
+.wireless-list {
+  margin: 5em 0;
+}
+
+.solution-bloc,
+.five-g-bloc,
+.wireless-bloc {
+  box-shadow: 2px 1px 20px #b7b7b7;
+  padding-bottom: 1em;
+  min-height: 200px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.solution-bloc > div,
+.five-g-bloc > div,
+.wireless-bloc > div {
+  background-color: var(--blue);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.five-g-bloc > div {
+  background-color: var(--red);
+}
+
+.solution-bloc h5,
+.five-g-bloc h5,
+.wireless-bloc h5 {
+  color: #fff;
+  padding: 1em;
+}
+
+.solution-bloc p,
+.five-g-bloc p,
+.wireless-bloc p {
+  color: var(--blue);
+  padding: 15px;
+  margin: 0;
+}
+
+.solution-bloc ul {
+  padding-left: 40px;
+  color: var(--blue);
+}
+
+/* CYBER SECURITY PAGE */
+.cyber-services,
+.iot-services,
+.contact-iot {
+  background: var(--blue);
+  margin-top: 5em;
+  padding: 4em 4em 6em;
+}
+
+.cyber-services h3 {
+  font-weight: 900;
+  text-align: center;
+  font-size: 1.6em;
+  margin-bottom: 2em;
+  color: #fff;
+}
+
+.cyber-services h4 {
+  color: #fff;
+  font-weight: 900;
+  border-left: 4px solid;
+  padding-left: 0.5em;
+}
+
+.cyber-services p {
+  color: #adcaff;
+}
+
+.sign-off {
+  margin: 3em 0;
+}
+
+.sign-off h5 {
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.sign-off a,
+.contact-iot a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.contact-iot a {
+  background-color: var(--red);
+  color: #fff;
+}
+
+.sign-off a::before,
+.sign-off a::after,
+.contact-iot a::before,
+.contact-iot a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.sign-off a::before,
+.contact-iot a::before {
+  background-color: var(--link-1);
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.sign-off a:hover::before,
+.contact-iot a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+.sign-off a::after,
+.contact-iot a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 10px;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: var(--link-1);
+}
+
+.sign-off a:hover::after,
+.contact-iot a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.sign-off a span,
+.contact-iot a span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.sign-off a:hover span,
+.contact-iot a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+
+/* IOT SOLUTIONS PAGE */
+
+.iot-description {
+  margin: 4em;
+  color: var(--blue);
+}
+
+.iot-description h4,
+.iot-services h4,
+.iot-portfolio {
+  font-weight: 700;
+  text-align: center;
+}
+
+.iot-solutions p {
+  color: var(--blue);
+}
+
+.iot-portfolio {
+  color: var(--blue);
+  margin-top: 4em;
+}
+
+.iot-services {
+  background: var(--dark-red);
+  color: #fff;
+}
+
+.iot-services h5 {
+  font-weight: 700;
+}
+
+.right-bloc {
+  padding-left: 5em;
+}
+
+.left-bloc {
+  padding-right: 5em;
+}
+
+.automated-metering h4 {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.automated-metering ul {
+  color: var(--blue);
+  padding: 1em 0;
+}
+
+.contact-iot h5 {
+  color: #fff;
+}
+
+.vertical-line {
+  position: relative;
+}
+
+.vertical-line::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 110px;
+  background-color: rgb(255, 255, 255);
+}
+
+.iot-trainings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.iot-trainings > div:first-child {
+  padding: 2em 4em;
+}
+
+.iot-trainings h3 {
+  color: #fff;
+}
+
+.iot-trainings p {
+  color: #fff;
+  font-size: 1.1em;
+  padding-bottom: 1em;
+}
+
+.iot-trainings .course-name {
+  font-size: 1.1em;
+  color: #fdf4d9;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+.iot-trainings > div:nth-child(2) {
+  background: url(../img/student-learning.jpg) bottom / cover no-repeat;
+  min-height: 300px;
+}
+
+.contact-iot {
+  margin: 0;
+}
+
+/* DATA CENTER PAGE */
+
+.sub-services .columns {
+  margin: -1.2em 0;
+}
+
+.active-tab {
+  border-bottom: 7px solid #adcaff !important;
+}
+
+.subsolution-tabs {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background: var(--blue);
+}
+
+.subsolution-tabs > button {
+  background: var(--blue);
+  color: #adcaff;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.2rem;
+  padding: 1em;
+  font-weight: 700;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.sub-services {
+  margin: 3em;
+}
+
+.sub-services h4 {
+  color: var(--red);
+  font-weight: 900;
+}
+
+.sub-services p {
+  color: var(--blue);
+}
+
+.cloud-environments h4 {
+  color: var(--red);
+  font-weight: 900;
+}
+
+.cloud-services h4 {
+  color: var(--blue);
+  font-weight: 900;
+  border-left: 4px solid;
+  padding-left: 0.5em;
+}
+
+.cloud-services p {
+  color: var(--blue);
+}
+
+.call-help {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3em;
+}
+
+.call-help h5 {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.call-help.sign-off a {
+  background-color: var(--red);
+  color: #fff;
+  margin-left: 5em;
+  bottom: 0.5em;
+}
+
+/* 404 PAGE */
+.error-section h5 {
+  color: var(--blue);
+  font-weight: 700;
+  padding: 0.5em 0;
+}
+
+.go-back {
+  display: block;
+}
+
+.error-section a {
+  margin: 1em 0;
+}
+
+/* SINGLE EVENT PAGE */
+
+h2#saa > div span {
+  width: 100%;
+  display: block;
+  font-size: 0.35em;
+  letter-spacing: 1px;
+}
+
+h2#saa > div {
+  margin: 0.4rem 1rem 1rem 0.4rem;
+}
+
+h2#saa {
+  display: flex;
+  font-size: 2.2em;
+}
+
+/* COURSES */
+
+.course-alert {
+  position: relative;
+  top: 0;
+  background: var(--red);
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 14px;
+  width: fit-content;
+  margin-bottom: 0;
+}
+
+.courses-bloc li a,
+.courses-bloc li.is-active a {
+  color: var(--blue);
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 5px 20px !important;
+  font-size: 1.1em;
+}
+
+.courses-bloc li.is-active a {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+.course-dates p,
+.upon-request p {
+  margin: 0 0 0.2em 0 !important;
+  padding: 0;
+  color: #0071dc;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.course-more-link {
+  padding: 6px 10px !important;
+  border: 2px solid var(--blue);
+  width: fit-content;
+  border-radius: 10px;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+.card:hover .course-more-link {
+  border: 2px solid #fff;
+}
+
+/* FOOTER */
+
+.footer {
+  background: #002d80 url(../img/footer-background.png);
+  color: #fff;
+  padding: 3em 3em 2em;
+  position: relative;
+  width: 100%;
+}
+
+.footer h4 {
+  padding-bottom: 0.5em;
+
+  font-weight: 700;
+}
+
+.footer li {
+  padding-top: 1em;
+
+  display: flex;
+}
+
+footer a:hover {
+  color: #adcaff;
+}
+
+.developer {
+  color: #adcaff;
+  font-size: 14px;
+}
+
+.developer a:hover {
+  color: #fff;
+}
+
+.regional-sites a {
+  margin-right: 25px;
+}
+
+.regional-sites img {
+  height: 32px;
+}
+
+.regional-sites span {
+  position: relative;
+  bottom: 10px;
+  left: 5px;
+}
+
+/* ZOHO BACKSTAGE EVENT BANNER */
+iframe[src*="zohobackstage.com"] {
+  width: 100%;
+  max-width: 970px;
+  display: block;
+  margin: 0 auto;
+}
