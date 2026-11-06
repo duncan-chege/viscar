@@ -12,10 +12,6 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title><?php wp_title(''); echo ' | ';  bloginfo( 'name' ); ?></title>
-
-
-
         <?php wp_head(); ?>
 <meta name="google-adsense-account" content="ca-pub-7922319688551430">
     </head>
@@ -130,6 +126,9 @@
                     'after'             => "</div>",
 
                     'walker'            => new Navwalker(),
+
+                    // Navwalker only handles nav menu items, so skip the wp_page_menu() fallback.
+                    'fallback_cb'       => false,
 
                 ));
 

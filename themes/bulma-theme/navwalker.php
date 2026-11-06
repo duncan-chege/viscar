@@ -26,10 +26,11 @@
     }
 
     public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+        $indent = str_repeat("\t", $depth);
         $is_current_item = 'class="active"';
         $liClasses = 'navbar-item ';
 
-        $hasChildren = $args->walker->has_children;
+        $hasChildren = $this->has_children;
         $liClasses .= $hasChildren ? " has-dropdown is-hoverable" : "";
 
         if ($hasChildren) {
@@ -48,7 +49,7 @@
 
     public function end_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
         $indent = str_repeat("\t", $depth);
-        if (in_array("has_children", $item->classes)) {
+        if (in_array("has_children", (array) $item->classes)) {
             $output .= "\n$indent</div>";
         }
         $output .= "\n$indent</a>";
