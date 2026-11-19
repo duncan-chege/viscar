@@ -9,11 +9,11 @@
 <?php get_template_part('template-parts/header-meta'); ?>
 
 <div class="solution-section">
-    <div class="columns is-multiline is-flex is-flex-wrap-wrap-reverse">
-        <div class="column is-6-desktop is-12-mobile">
+    <div class="flex flex-wrap-reverse -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full p-3">
             <?php the_content(); ?>
         </div>
-        <div class="column is-6-desktop fluid-power-img">
+        <div class="fluid-power-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
         </div>
     </div>
 </div>
@@ -24,17 +24,17 @@
         $args = array(
             'post_type' => 'fluid-trainings',
         );
-        $wp_query= new WP_Query($args); 
+        $courses_query = new WP_Query($args); 
     ?>
 
     <div class="solution-courses-block blue-links">
         <h3>Our Training Programs</h3>
-        <div class="columns is-multiline mx-2">
-            <?php if ($wp_query->have_posts()) : ?>
-            <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-            <div class="column is-6-desktop is-12-tablet my-2">
-                <a href="<?php echo get_permalink(); ?>">
-                    <div class="course-name is-flex">
+        <div class="md:flex flex-wrap mx-2 -mt-3 mb-3 last:-mb-3">
+            <?php if ($courses_query->have_posts()) : ?>
+            <?php while ($courses_query->have_posts()) : $courses_query->the_post(); ?>
+            <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 md:flex-none md:w-full my-2 p-3">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="course-name flex">
                         <i class="bi bi-caret-right-fill"></i>
                         <h5><?php the_title(); ?></h5>
                     </div>
@@ -52,9 +52,9 @@
 </div>
 
 <div class="support-center">
-    <h3 class="mb-6">Industrial Technical Support Center</h3>
-    <div class="columns is-multiline">
-        <div class="column is-6 pr-6">
+    <h3 class="mb-12">Industrial Technical Support Center</h3>
+    <div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 md:flex-none md:w-1/2 py-3 pr-12 pl-3">
             <p>The Viscar Industrial Technical Support Centre seeks to support our clients in enhancing their
                 equipment availability and reliability resulting in optimal performance and productivity of the plant.
                 We know that as a manufacturer you cannot afford downtime caused by equipment failure, the loss of a
@@ -65,35 +65,35 @@
                 and skills transfer.</p>
             <p>The services we offer are:</p>
         </div>
-        <div class="column is-6">
+        <div class="grow shrink basis-0 md:flex-none md:w-1/2 p-3">
         </div>
     </div>
 </div>
 
 <div class="support-center-services">
-    <div class="columns is-multiline">
-        <div class="column is-6 px-0">
+    <div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 md:flex-none md:w-1/2 px-0 py-3">
             <div class="installation-automation">
                 <h4>Repair of Hydraulic and Pneumatic Equipment and Components</h4>
                 <p>Diagnosis, troubleshooting and repair of industrial equipment and components faults i.e Hydraulic
                     pumps,
                     valves, motors. Pneumatic valves, compressor</p>
-                <h4 class="pt-5">Design, installation and commissioning and maintenance of automation projects</h4>
+                <h4 class="pt-6">Design, installation and commissioning and maintenance of automation projects</h4>
                 <p>New projects, upgrades from manual to semi-automatic systems</p>
             </div>
         </div>
-        <div class="column is-6 project-automation"></div>
+        <div class="project-automation grow shrink basis-0 md:flex-none md:w-1/2 p-3"></div>
     </div>
 
-    <div class="columns is-multiline my-6">
-        <div class="column is-6 automation-visual"></div>
-        <div class="column is-6">
+    <div class="md:flex flex-wrap -mx-3 my-12">
+        <div class="automation-visual grow shrink basis-0 md:flex-none md:w-1/2 p-3"></div>
+        <div class="grow shrink basis-0 md:flex-none md:w-1/2 p-3">
             <div class="automation-projects">
                 <h4>Supply of equipment, machine parts and industrial components</h4>
                 <p>This will involve provision of parts for replacement in faulty equipment, sale of consumables and
                     supply
                     of parts for ongoing projects.</p>
-                <h4 class="pt-5">Supply of Didactic Equipment for TVETS and Industrial Training</h4>
+                <h4 class="pt-6">Supply of Didactic Equipment for TVETS and Industrial Training</h4>
                 <ul class="mt-4">
                     <li>Hydraulic and Electro-hydraulic Training Kits</li>
                     <li>Pneumatic and Pneumatic-hydraulic Training Kits</li>

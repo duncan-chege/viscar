@@ -1,141 +1,108 @@
 <!DOCTYPE html>
-
 <html <?php language_attributes(); ?>>
 
+<head>
+    <!-- Google Tag Manager was deleted cause code was appearing on main site -->
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php wp_head(); ?>
+    <meta name="google-adsense-account" content="ca-pub-7922319688551430">
+</head>
 
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
 
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <!-- Google Tag Manager was deleted cause code was appearing on main site -->
-		
-        <meta charset="<?php bloginfo('charset'); ?>">
+    <?php
+    $theme_uri = get_template_directory_uri();
+    $upcoming_trainings = wp_count_posts('upcoming-trainings');
+    $number_trainings = isset($upcoming_trainings->publish) ? (int) $upcoming_trainings->publish : 0;
+    ?>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <?php wp_head(); ?>
-<meta name="google-adsense-account" content="ca-pub-7922319688551430">
-    </head>
-
-
-
-    <body <?php body_class(); ?>>
-
-        <header class="">
-            <nav id="top-nav" class="navbar is-black has-text-white">
-                <div class="container is-flex is-justify-content-space-between is-flex-wrap-wrap">
-                    <div class="navbar-start">
-                        <div class="drop">
-                            <a href="<?php echo home_url(); ?>" target="_blank" class="">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/kenyan-flag.png"
-                                    alt='site logo' />
-                                <span> KE
-                                    <i class="bi bi-chevron-down" aria-hidden="true"></i>
-                                </span>
+    <header>
+        <nav id="top-nav" class="relative z-30 min-h-[3.25rem] bg-[#0a0a0a] text-white lg:flex lg:items-stretch">
+            <div class="site-container flex min-h-[3.25rem] w-full flex-wrap items-stretch justify-between">
+                <div class="lg:mr-auto lg:flex lg:items-stretch lg:justify-start">
+                    <div class="drop">
+                        <a href="<?php echo esc_url(home_url()); ?>" target="_blank">
+                            <img src="<?php echo esc_url($theme_uri); ?>/assets/img/kenyan-flag.png" alt="Kenya" />
+                            <span> KE <i class="bi bi-chevron-down" aria-hidden="true"></i></span>
+                        </a>
+                        <div class="drop-content">
+                            <a href="https://viscarconsulting.co.ug/" target="_blank">
+                                <img src="<?php echo esc_url($theme_uri); ?>/assets/img/ugandan-flag.png" alt="Uganda" />
+                                <span class="text-[#0a0a0a]"> UG </span>
                             </a>
-                            <div class="drop-content">
-                                <a href="https://viscarconsulting.co.ug/" target="_blank" class="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ugandan-flag.png"
-                                        alt='site logo' /> <span class="has-text-black"> UG </span>
-                                </a>
-                                <a href="https://www.viscarconsulting.co.tz/" target="_blank" class="">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tanzanian-flag.png"
-                                        alt='site logo' /> <span class="has-text-black"> TZ </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="scrolling-event my-4 is-hidden-touch">
-                        <?php 
-                            $args = array(
-                                'post_type' => 'events', 
-                                'post_status' => 'publish',
-                                'posts_per_page' => -1,
-                                'order' => 'DESC',
-                            );
-
-                            $event_query= new WP_Query($args); 
-                        ?>
-
-                        <?php if ($event_query->have_posts()) : ?>
-                        <?php while ($event_query->have_posts()) : $event_query->the_post(); ?>
-                        <div class="text">
-                            <span> <a href="<?php echo get_permalink(); ?>">Upcoming Event: <?php the_title(); ?></a></span>
-                        </div>
-                        <div class="text">
-                            <span> <a href="<?php echo get_permalink(); ?>">Upcoming Event: <?php the_title(); ?></a></span>
-                        </div>
-
-                        <?php endwhile; ?>
-                        <?php wp_reset_postdata(); ?>
-                        <?php endif; ?>
-                    </div> -->
-
-                    <div class="navbar-end is-justify-content-flex-end">
-                        <div class="navbar-item p-0">
-                            <a class="trainings-btn my-3" href="<?php echo home_url(); ?>/upcoming-trainings">
-                                <?php 
-                                $args = array(
-                                    'post_type' => 'upcoming-trainings',
-                                );
-                                $up_trainings = new WP_Query($args);
-                                $number_trainings = $up_trainings->found_posts;
-                            ?>
-
-                                <span class="text">Upcoming Trainings</span> <span
-                                    class="no"><?php echo $number_trainings; ?></span>
+                            <a href="https://www.viscarconsulting.co.tz/" target="_blank">
+                                <img src="<?php echo esc_url($theme_uri); ?>/assets/img/tanzanian-flag.png" alt="Tanzania" />
+                                <span class="text-[#0a0a0a]"> TZ </span>
                             </a>
                         </div>
                     </div>
                 </div>
-            </nav>
 
-            <nav id="primary-nav" class="navbar px-3 py-1" role='navigation' aria-label="main navigation">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a href="<?php echo home_url(); ?>"><img
-                                src="https://viscarcapacity.com/wp-content/uploads/2026/07/Viscar-New-Logo-No-background-scaled.png"
-                                alt='Viscar Industrial Capacity Ltd'></a>
-                        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                            data-target="navMenu">
-                            <span aria-hidden="true"></span>
-                            <span aria-hidden="true"></span>
-                            <span aria-hidden="true"></span>
+                <div class="justify-end lg:ml-auto lg:flex lg:items-stretch">
+                    <div class="relative block shrink-0 grow-0 p-0 leading-normal text-[#4a4a4a] lg:flex lg:items-center">
+                        <a class="trainings-btn my-3" href="<?php echo esc_url(home_url('/upcoming-trainings')); ?>">
+                            <span class="text">Upcoming Trainings</span>
+                            <span class="no"><?php echo esc_html($number_trainings); ?></span>
                         </a>
                     </div>
+                </div>
+            </div>
+        </nav>
 
-                    <?php
-                wp_nav_menu( array(
-
-                    'theme_location'    => 'primary',
-
-                    'depth'             => 0,
-
-                    'container'         => 'false',
-
-                    'container_id'      => '',
-
-                    'container_class'   => '',
-
-                    // 'items_wrap'     => 'div',
-
-                    'menu_class'        => 'navbar-menu',
-
-                    'menu_id'           => 'navMenu',
-
-                    'after'             => "</div>",
-
-                    'walker'            => new Navwalker(),
-
-                    // Navwalker only handles nav menu items, so skip the wp_page_menu() fallback.
-                    'fallback_cb'       => false,
-
-                ));
-
-            ?>
-
+        <nav id="primary-nav" class="relative z-10 min-h-[3.25rem] bg-white px-3 py-1 lg:flex lg:items-stretch" aria-label="Main navigation">
+            <div class="site-container flex min-h-[3.25rem] w-full items-stretch">
+                <div class="brand-logo flex min-h-[3.25rem] shrink-0 items-stretch lg:-ml-3">
+                    <a href="<?php echo esc_url(home_url('/')); ?>">
+                        <img src="<?php echo esc_url($theme_uri); ?>/assets/img/viscar-logo.png" alt="<?php echo esc_attr__('Viscar Industrial Capacity Ltd', 'viscar'); ?>">
+                    </a>
                 </div>
 
-            </nav>
+                <!-- Mobile menu button -->
+                <button type="button" id="mobile-menu-toggle"
+                    class="relative ml-auto block h-[3.25rem] w-[3.25rem] cursor-pointer border-0 bg-transparent p-0 text-[#4a4a4a] hover:bg-black/5 lg:hidden"
+                    aria-label="<?php esc_attr_e('Open menu', 'viscar'); ?>" aria-controls="mobile-menu" aria-expanded="false">
+                    <span aria-hidden="true" class="absolute top-[calc(50%-6px)] left-[calc(50%-8px)] block h-px w-4 bg-current"></span>
+                    <span aria-hidden="true" class="absolute top-[calc(50%-1px)] left-[calc(50%-8px)] block h-px w-4 bg-current"></span>
+                    <span aria-hidden="true" class="absolute top-[calc(50%+4px)] left-[calc(50%-8px)] block h-px w-4 bg-current"></span>
+                </button>
 
-        </header>
+                <!-- Desktop navigation -->
+                <div class="hidden lg:-mr-3 lg:flex lg:shrink-0 lg:grow lg:items-stretch lg:justify-center">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'primary',
+                        'menu_id'        => 'navMenu',
+                        'menu_class'     => 'primary-menu',
+                        'container'      => false,
+                        'fallback_cb'    => false,
+                    ));
+                    ?>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile navigation backdrop -->
+        <div id="mobile-menu-overlay"
+            class="pointer-events-none invisible fixed inset-0 z-40 bg-black/50 opacity-0 transition duration-300 lg:hidden"></div>
+
+        <!-- Mobile navigation drawer -->
+        <div id="mobile-menu"
+            class="fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs translate-x-full overflow-y-auto bg-white shadow-xl transition-transform duration-300 lg:hidden"
+            aria-label="<?php esc_attr_e('Mobile navigation', 'viscar'); ?>">
+            <div class="flex items-center justify-end border-b border-gray-100 px-4 pt-4 pb-2">
+                <button type="button" id="mobile-menu-close" class="cursor-pointer border-0 bg-transparent p-2 text-viscar-blue" aria-label="<?php esc_attr_e('Close menu', 'viscar'); ?>">
+                    <i class="bi bi-x-lg text-xl" aria-hidden="true"></i>
+                </button>
+            </div>
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'menu_class'     => 'drawer-menu',
+                'container'      => false,
+                'fallback_cb'    => false,
+            ));
+            ?>
+        </div>
+    </header>

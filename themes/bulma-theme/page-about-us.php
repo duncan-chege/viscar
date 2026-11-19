@@ -14,9 +14,9 @@
 
 <div class="page-hero-section">
 
-    <h1> <?php echo get_the_title(); ?> </h1>
+    <h1> <?php the_title(); ?> </h1>
 
-    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/header-vector.svg">
+    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/header-vector.svg">
 
 </div>
 
@@ -24,14 +24,14 @@
 
 <div class="who-section">
 
-    <div class="columns is-multiline is-flex is-flex-wrap-wrap-reverse">
+    <div class="flex flex-wrap-reverse -mx-3 -mt-3 mb-3 last:-mb-3">
 
-        <div class="column is-6-desktop is-12-mobile">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full p-3">
             <h2> Our Origins </h2>
-            <?php echo the_content(); ?>
+            <?php the_content(); ?>
         </div>
 
-        <div class="column is-6-desktop origin-img">
+        <div class="origin-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
 
         </div>
 
@@ -43,15 +43,15 @@
 
 <div class="vision-mission">
 
-    <img class="triangle-vector" src="<?php echo get_template_directory_uri(); ?>/assets/img/triangle-vector.svg">
+    <img class="triangle-vector" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/triangle-vector.svg">
 
-    <div class="columns is-multiline is-centered">
+    <div class="md:flex flex-wrap justify-center -mx-3 -mt-3 mb-3 last:-mb-3">
 
-        <div class="column is-3-desktop">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 p-3">
 
             <div class="mission">
 
-                <h2 class="has-text-centered">Mission</h2>
+                <h2 class="text-center">Mission</h2>
 
                 <p>Co-creating engineering and emerging technology capabilities for sustainable industrial growth.</p>
 
@@ -59,11 +59,11 @@
 
         </div>
 
-        <div class="column is-3-desktop">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 p-3">
 
             <div class="vision">
 
-                <h2 class="has-text-centered">Vision</h2>
+                <h2 class="text-center">Vision</h2>
 
                 <p>To be Africa's premier catalyst for excellence in engineering and emerging technology.</p>
 
@@ -71,11 +71,11 @@
 
         </div>
 
-        <div class="column is-3-desktop">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 p-3">
 
             <div class="brand-promise">
 
-                <h2 class="has-text-centered">Goal</h2>
+                <h2 class="text-center">Goal</h2>
 
                 <p>A mature organization powered by autonomous business units.</p>
 
@@ -91,29 +91,29 @@
 
 <div class="image-breaks">
 
-    <div class="columns is-multiline is-centered">
+    <div class="md:flex flex-wrap justify-center -mx-3 -mt-3 mb-3 last:-mb-3">
 
-        <div class="column is-3-desktop">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 p-3">
 
-            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/image-break.jpg">
-
-        </div>
-
-        <div class="column is-3-desktop is-hidden-mobile">
-
-            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/image-break-2.jpg">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/image-break.jpg">
 
         </div>
 
-        <div class="column is-3-desktop is-hidden-mobile">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 max-md:hidden p-3">
 
-            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/image-break-3.png">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/image-break-2.jpg">
 
         </div>
 
-        <div class="column is-3-desktop is-hidden-mobile">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 max-md:hidden p-3">
 
-            <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/image-break-4.png">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/image-break-3.png">
+
+        </div>
+
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 max-md:hidden p-3">
+
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/image-break-4.png">
 
         </div>
 
@@ -127,15 +127,15 @@
 
     <h2> Our Milestones </h2>
 
-    <div class="columns is-centered">
+    <div class="md:flex justify-center -mx-3 -mt-3 mb-3 last:-mb-3">
 
-        <div class="column is-7-desktop">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-7/12 p-3">
 
-            <div class="tabs is-boxed my-0">
+            <div class="tab-nav tab-nav-boxed my-0" data-tabs>
 
-                <ul class="is-justify-content-space-between">
+                <ul class="justify-between">
 
-                    <li class="is-active" data-target="first-year"><a>2008</a>
+                    <li class="is-current" data-target="first-year"><a>2008</a>
 
 
 
@@ -153,7 +153,7 @@
 
             </div>
 
-            <div class="" id="tab-content">
+            <div id="tab-content">
 
                 <div id="first-year">
 
@@ -177,7 +177,7 @@
 
 
 
-                <div id="second-year" class="is-hidden">
+                <div id="second-year" class="hidden">
 
                     <p> We solved a gap in Engineering technology by introducing corporate training. We also resourced
 
@@ -193,7 +193,7 @@
 
                 </div>
 
-                <div id="third-year" class="is-hidden">
+                <div id="third-year" class="hidden">
 
                     <p>Viscar moved from the city centre to Ngong’ road to sustain its rapid growth and to fulfil the
 
@@ -203,7 +203,7 @@
 
                 </div>
 
-                <div id="forth-year" class="is-hidden">
+                <div id="forth-year" class="hidden">
 
                     <p>Viscar launched a 4-year strategic plan with a renewed vision of becoming the leading African
 
@@ -219,7 +219,7 @@
 
                 </div>
 
-                <div id="fifth-year" class="is-hidden">
+                <div id="fifth-year" class="hidden">
 
                     <p>Viscar was recognized and awarded the TOP 100 Mid-sized company prize. We partnered with the
 
@@ -251,109 +251,109 @@
 
 <div class="choose-us">
 
-    <img class="triangle-vector" src="<?php echo get_template_directory_uri(); ?>/assets/img/triangle-vector.svg">
+    <img class="triangle-vector" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/triangle-vector.svg">
 
-    <h2 class="has-text-centered"> Why Choose Viscar </h2>
+    <h2 class="text-center"> Why Choose Viscar </h2>
 
-    <div class="columns is-multiline">
+    <div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
 
-        <div class="column is-3-desktop ">
-
-            <div class="pill blue">
-
-                <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/blue-cog.svg">
-
-                <h5 class="has-text-centered">Deep Technical Specialization</h5>
-
-            </div>
-
-        </div>
-
-        <div class="column is-3-desktop ">
-
-            <div class="pill red">
-
-                <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/red-cog.svg">
-
-                <h5 class="has-text-centered">Integrated, End-to-End Solutions</h5>
-
-            </div>
-
-        </div>
-
-        <div class="column is-3-desktop ">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 p-3">
 
             <div class="pill blue">
 
-                <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/blue-cog.svg">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/blue-cog.svg">
 
-                <h5 class="has-text-centered">Customized, Needs-Driven Approach</h5>
+                <h5 class="text-center">Deep Technical Specialization</h5>
 
             </div>
 
         </div>
 
-        <div class="column is-3-desktop ">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 p-3">
 
             <div class="pill red">
 
-                <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/red-cog.svg">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/red-cog.svg">
 
-                <h5 class="has-text-centered">One Partner, Interrelated Services</h5>
+                <h5 class="text-center">Integrated, End-to-End Solutions</h5>
 
             </div>
 
         </div>
 
-
-
-        <div class="my-5"></div>
-
-
-
-        <div class="column is-3-desktop ">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 p-3">
 
             <div class="pill blue">
 
-                <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/blue-cog.svg">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/blue-cog.svg">
 
-                <h5 class="has-text-centered">Competent Consultants & Partners</h5>
+                <h5 class="text-center">Customized, Needs-Driven Approach</h5>
 
             </div>
 
         </div>
 
-        <div class="column is-3-desktop ">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 p-3">
 
             <div class="pill red">
 
-                <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/red-cog.svg">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/red-cog.svg">
 
-                <h5 class="has-text-centered">Accreditation & Compliance Credibility</h5>
+                <h5 class="text-center">One Partner, Interrelated Services</h5>
 
             </div>
 
         </div>
 
-        <div class="column is-3-desktop is-4-tablet">
+
+
+        <div class="my-6"></div>
+
+
+
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 p-3">
 
             <div class="pill blue">
 
-                <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/blue-cog.svg">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/blue-cog.svg">
 
-                <h5 class="has-text-centered">Proven Track Record & Regional Reach</h5>
+                <h5 class="text-center">Competent Consultants & Partners</h5>
 
             </div>
 
         </div>
 
-        <div class="column is-3-desktop is-4-tablet">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 p-3">
 
             <div class="pill red">
 
-                <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/red-cog.svg">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/red-cog.svg">
 
-                <h5 class="has-text-centered">Quality in Service Delivery</h5>
+                <h5 class="text-center">Accreditation & Compliance Credibility</h5>
+
+            </div>
+
+        </div>
+
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 md:flex-none md:w-1/3 p-3">
+
+            <div class="pill blue">
+
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/blue-cog.svg">
+
+                <h5 class="text-center">Proven Track Record & Regional Reach</h5>
+
+            </div>
+
+        </div>
+
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 md:flex-none md:w-1/3 p-3">
+
+            <div class="pill red">
+
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/red-cog.svg">
+
+                <h5 class="text-center">Quality in Service Delivery</h5>
 
             </div>
 
@@ -369,7 +369,7 @@
 
     <h2> Happy Customers </h2>
 
-    <div class="feedback splide">
+    <div class="feedback splide" data-splide='{"type":"loop","arrows":false,"pagination":false,"drag":"free","focus":"center","perPage":3,"autoScroll":{"speed":0.5}}' data-autoscroll>
 
         <div class="splide__track" id="splide-track">
 
@@ -383,7 +383,7 @@
 
                         in class setup and the real life skills employers require </p>
 
-                    <p class="my-0 has-text-weight-bold"> Maureen Mureithi </p>
+                    <p class="font-bold my-0"> Maureen Mureithi </p>
 
                     <p class="role">RAN Optimization Engineer, Safaricom</p>
 
@@ -395,7 +395,7 @@
 
                         enormous amount of industry-related skills and new technologies </p>
 
-                    <p class="my-0 has-text-weight-bold"> Vincent Kipngetich </p>
+                    <p class="font-bold my-0"> Vincent Kipngetich </p>
 
                     <p class="role">Engineer, Ericson</p>
 
@@ -411,7 +411,7 @@
 
                         machine</p>
 
-                    <p class="my-0 has-text-weight-bold"> Mrs Lily </p>
+                    <p class="font-bold my-0"> Mrs Lily </p>
 
                     <p class="role">Production Manager, Tropikal Brands</p>
 
@@ -427,7 +427,7 @@
 
                         industry</p>
 
-                    <p class="my-0 has-text-weight-bold"> Bernard Cheruiyot </p>
+                    <p class="font-bold my-0"> Bernard Cheruiyot </p>
 
                     <p class="role">IT Support Engineer, Communications Authority of Kenya (CAK)</p>
 
@@ -440,39 +440,5 @@
     </div>
 
 </div>
-
-
-
-<script>
-
-    document.addEventListener('DOMContentLoaded', function () {
-
-        new Splide('.splide', {
-
-            arrows: false,
-
-            pagination: false,
-
-            type: 'loop',
-
-            drag: 'free',
-
-            focus: 'center',
-
-            perPage: 3,
-
-            autoScroll: {
-
-                speed: 0.5,
-
-            },
-
-        }).mount(window.splide.Extensions);
-
-    });
-
-</script>
-
-
 
 <?php get_footer(); ?>

@@ -8,54 +8,54 @@
 <?php get_template_part('template-parts/header-meta'); ?>
 
 <div class="subsolution-section">
-    <div class="columns is-multiline">
-        <div class="column is-6-desktop is-12-mobile">
+    <div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full p-3">
             <?php the_content(); ?>
         </div>
-        <div class="column is-6-desktop is-12-mobile broadband-img">
+        <div class="broadband-img grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full p-3">
         </div>
     </div>
 </div>
 
-<div class="subsolution-tabs is-hidden-touch">
+<div class="subsolution-tabs max-lg:hidden">
     <button class="tablink active-tab" onclick="openService(event,'Consulting')">Telecoms Consulting Services</button>
     <button class="tablink" onclick="openService(event,'Managed')">Telecoms Managed Services</button>
     <button class="tablink" onclick="openService(event,'Training')">Telecoms Training Programs</button>
 </div>
 
-<div class="dropdown is-hoverable is-hidden-desktop">
-    <div class="dropdown-trigger">
-        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+<div class="select-menu lg:hidden" data-service-menu>
+    <div>
+        <button type="button" class="select-menu-button" aria-haspopup="true" aria-controls="service-menu">
             <span>Select our services</span>
-            <span class="icon is-small">
+            <span class="icon">
                 <i class="bi bi-chevron-down" aria-hidden="true"></i>
             </span>
         </button>
     </div>
-    <div class="dropdown-menu" id="dropdown-menu" role="menu">
-        <div class="dropdown-content">
-            <a href="#" class="dropdown-item active-tab"
+    <div class="select-menu-list" id="service-menu" role="menu">
+        <div class="select-menu-content">
+            <a href="#" class="select-menu-item active-tab"
                 onclick="dropService('Consulting', this); return false;">Consulting Center
                 &amp;
                 Cloud Consultancy</a>
-            <a href="#" class="dropdown-item" onclick="dropService('Managed', this); return false;">Managed Management
+            <a href="#" class="select-menu-item" onclick="dropService('Managed', this); return false;">Managed Management
                 Software</a>
-            <a href="#" class="dropdown-item" onclick="dropService('Training', this); return false;">Managed Cloud
+            <a href="#" class="select-menu-item" onclick="dropService('Training', this); return false;">Managed Cloud
                 Services</a>
         </div>
     </div>
 </div>
 
 <div id="Consulting" class="sub-services">
-    <div class="columns is-multiline mb-6">
-        <div class="column is-7-desktop is-offset-3-desktop">
-            <h4 class="has-text-centered">Elevate your  Business Growth and Success Through our Telecommunications
+    <div class="md:flex flex-wrap mb-12">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-7/12 lg:ml-[25%] p-3">
+            <h4 class="text-center">Elevate your  Business Growth and Success Through our Telecommunications
                 Consulting Service</h4>
         </div>
     </div>
 
-    <div class="columns is-multiline">
-        <div class="column is-6-desktop">
+    <div class="md:flex flex-wrap">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
             <p>We help telecom companies including Mobile Network Operators, ISPs, Utility Telcos and Regulators
                 navigate the diverse array of technology and industry trends.</p>
             <p>These trends are: Broadband Networks, Mobile Networks and 5G, Wireless Radio Networks and IoT Networks.
@@ -69,21 +69,21 @@
             </ul>
             <a href="#">Download Product Brochure <span><i class="bi bi-download pl-1"></i></span></a>
         </div>
-        <div class="column is-6-desktop fiber-cable-img">
+        <div class="fiber-cable-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
         </div>
     </div>
 </div>
 
 <div id="Managed" class="sub-services" style="display:none">
-    <div class="columns is-multiline mb-6">
-        <div class="column is-7-desktop is-offset-3-desktop">
-            <h4 class="has-text-centered">Our Telecom managed services and Outsourcing Help Operators to control
+    <div class="md:flex flex-wrap mb-12">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-7/12 lg:ml-[25%] p-3">
+            <h4 class="text-center">Our Telecom managed services and Outsourcing Help Operators to control
                 operational costs and complexity in their IT and network environments</h4>
         </div>
     </div>
 
-    <div class="columns is-multiline">
-        <div class="column is-6-desktop">
+    <div class="md:flex flex-wrap">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
             <p>At Viscar, we design, build, deploy, optimize, manage and support networked communications and IT systems
                 and infrastructure for our customers, allowing them to focus on driving business value while we take
                 care of the day-to-day operations and management of their systems.</p>
@@ -98,9 +98,9 @@
             </ul>
             <a href="#">Download Product Brochure <span><i class="bi bi-download pl-1"></i></span></a>
         </div>
-        <div class="column is-6-desktop telecoms-managed-img">
+        <div class="telecoms-managed-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
         </div>
-        <div class="column is-6-desktop is-12-tablet is-12-mobile">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 md:flex-none md:w-full max-md:flex-none max-md:w-full p-3">
             <p>Our Telecom Managed Services can be offered in two approaches, which are carefully discussed and selected
                 based on each customers unique needs</p>
             <ul>
@@ -119,15 +119,15 @@
 </div>
 
 <div id="Training" class="sub-services" style="display:none">
-    <div class="columns is-multiline mb-6">
-        <div class="column is-7-desktop is-offset-3-desktop">
-            <h4 class="has-text-centered">We provide flexible training solutions for individuals, teams, and enterprises
+    <div class="md:flex flex-wrap mb-12">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-7/12 lg:ml-[25%] p-3">
+            <h4 class="text-center">We provide flexible training solutions for individuals, teams, and enterprises
                 in the Telecoms industry</h4>
         </div>
     </div>
 
-    <div class="columns is-multiline">
-        <div class="column is-6-desktop">
+    <div class="md:flex flex-wrap">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
             <p>We have trained more than 10,000+ professionals and 50+ businesses. Our technology training is born of
                 our founding mission to Empower organizations and individuals for optimal performance and productivity
                 through value based training.</p>
@@ -144,7 +144,7 @@
             </ul>
             <a href="#">Download Product Brochure <span><i class="bi bi-download pl-1"></i></span></a>
         </div>
-        <div class="column is-6-desktop telecoms-training-img">
+        <div class="telecoms-training-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
         </div>
     </div>
 </div>
@@ -165,8 +165,8 @@
             <?php if ($iot_query->have_posts()) : ?>
             <?php while ($iot_query->have_posts()) : $iot_query->the_post(); ?>
             <div>
-                <a href="<?php echo get_permalink(); ?>">
-                    <div class="course-name is-flex">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="course-name flex">
                         <i class="bi bi-caret-right-fill" style="padding-right: 0.5em; font-size: 1.2rem;"></i>
                         <h5><?php the_title(); ?></h5>
                     </div>
@@ -181,45 +181,5 @@
         </div>
     </div>
 </div>
-
-<script>
-    function openService(evt, servName) {
-        var i, x, tablinks;
-        x = document.getElementsByClassName("sub-services");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < x.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
-        }
-        document.getElementById(servName).style.display = "block";
-        evt.currentTarget.className += " active-tab";
-    }
-
-    function dropService(servName, menuItem) {
-        var dropdownItems = document.getElementsByClassName("dropdown-item");
-        for (var i = 0; i < dropdownItems.length; i++) {
-            var item = dropdownItems[i];
-            if (item.getAttribute("onclick") === `dropService('${servName}', this); return false;`) {
-                item.classList.add("is-active");
-                var button = menuItem.closest(".dropdown").querySelector(".button span");
-                button.textContent = item.textContent;
-            } else {
-                item.classList.remove("is-active");
-            }
-        }
-        var subServices = document.getElementsByClassName("sub-services");
-        for (var j = 0; j < subServices.length; j++) {
-            var service = subServices[j];
-            if (service.id === servName) {
-                service.style.display = "block";
-            } else {
-                service.style.display = "none";
-            }
-        }
-    }
-</script>
-
 
 <?php get_footer();?>

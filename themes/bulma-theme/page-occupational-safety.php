@@ -9,11 +9,11 @@
 <?php get_template_part('template-parts/header-meta'); ?>
 
 <div class="subsolution-section">
-    <div class="columns is-multiline">
-        <div class="column is-6-desktop is-12-mobile">
+    <div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full p-3">
             <?php the_content(); ?>
         </div>
-        <div class="column is-6-desktop occ-safety-img">
+        <div class="occ-safety-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
         </div>
     </div>
 </div>
@@ -31,12 +31,12 @@
         <h3>Our Training Programs</h3>
         <p>We offer Certification from the Institute for Work at Height in collaboration with Group 583 Consulting.
         </p>
-        <div class="columns is-multiline mx-2">
+        <div class="md:flex flex-wrap mx-2 -mt-3 mb-3 last:-mb-3">
             <?php if ($oc_query->have_posts()) : ?>
             <?php while ($oc_query->have_posts()) : $oc_query->the_post(); ?>
-            <div class="column is-6-desktop is-12-tablet my-2">
-                <a href="<?php echo get_permalink(); ?>">
-                    <div class="course-name is-flex">
+            <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 md:flex-none md:w-full my-2 p-3">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="course-name flex">
                         <i class="bi bi-caret-right-fill"></i>
                         <h5><?php the_title(); ?></h5>
                     </div>
@@ -54,8 +54,8 @@
 </div>
 
 <div class="consultancy-supply">
-    <div class="columns is-multiline">
-        <div class="column is-5-desktop">
+    <div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-5/12 p-3">
             <div class="consult">
                 <h4 class="pb-4">Consultancy Solutions</h4>
                 <ul>

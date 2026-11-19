@@ -5,13 +5,13 @@
 <?php get_header(); ?>
 
 <div class="page-hero-section">
-    <h1> <?php echo get_the_title(); ?> </h1>
-    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/header-vector.svg">
+    <h1> <?php the_title(); ?> </h1>
+    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/header-vector.svg">
     
     
 </div>
-<div class="column">
-        <?php echo the_content(); ?>
+<div class="grow shrink basis-0 p-3">
+        <?php the_content(); ?>
     </div>
 
 <?php get_footer(); ?>

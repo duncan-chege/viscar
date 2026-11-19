@@ -1,0 +1,18 @@
+{
+  "name": "viscar-tailwind-theme",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Viscar WordPress theme built with Tailwind CSS v4 and Vite",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "tailwindcss": "^4.1.11",
+    "vite": "^5.0.0",
+    "vite-plugin-live-reload": "^3.0.3"
+  }
+}

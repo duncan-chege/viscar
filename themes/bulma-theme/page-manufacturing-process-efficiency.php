@@ -9,18 +9,18 @@
 <?php get_template_part('template-parts/header-meta'); ?>
 
 <div class="subsolution-section">
-    <div class="columns is-multiline is-flex is-flex-wrap-wrap-reverse">
-        <div class="column is-6-desktop is-12-mobile">
+    <div class="flex flex-wrap-reverse -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full p-3">
             <?php the_content(); ?>
         </div>
-        <div class="column is-6-desktop process-approach-img">
+        <div class="process-approach-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
         </div>
     </div>
 </div>
 
 <div class="process-audit">
-    <div class="columns is-multiline is-flex is-flex-wrap-wrap-reverse">
-        <div class="column is-6-desktop is-12-mobile">
+    <div class="flex flex-wrap-reverse -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full p-3">
             <h3 class="mb-4">Objectives of the Process Improvement Audit</h3>
             <ul class="audit-list">
                 <li>To study processes and identify gaps and problems to improve manufacturing excellence</li>
@@ -38,39 +38,39 @@
             </ul>
         </div>
 
-        <div class="column is-6-desktop process-audit-img">
+        <div class="process-audit-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
 
         </div>
     </div>
 </div>
 
 <div class="process-overview">
-    <div class="columns is-multiline">
-        <div class="column is-6-desktop process-overview-img">
+    <div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="process-overview-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
         </div>
 
-        <div class="column is-6-desktop overview-details">
+        <div class="overview-details grow shrink basis-0 lg:flex-none lg:w-1/2 py-3 pr-3">
             <h3>Overview of the Process Improvement Audit</h3>
             <p>The process improvement audit is geared towards understanding all the processes and will include the
                 following.</p>
-            <button class="accordion">The Organization</button>
+            <button type="button" class="accordion">The Organization</button>
             <div class="panel">
                 <p>A look at the company's strategic goals, key performance indicators for individuals and relevant
                     business functions.</p>
             </div>
 
-            <button class="accordion"> Understanding the Process Documentation</button>
+            <button type="button" class="accordion"> Understanding the Process Documentation</button>
             <div class="panel">
                 <p>Review and understand all process documentation for effective control and data collection.</p>
             </div>
 
-            <button class="accordion">Identify Process Gaps and Improvement Opportunities</button>
+            <button type="button" class="accordion">Identify Process Gaps and Improvement Opportunities</button>
             <div class="panel">
                 <p>Assess the process, equipment, identify gaps, propose improvement initiatives, suggest cultural
                     changes, document steps, and provide implementation timelines.</p>
             </div>
 
-            <button class="accordion"> Recommendation and Reports</button>
+            <button type="button" class="accordion"> Recommendation and Reports</button>
             <div class="panel">
                 <p>The audit findings and recommended solutions are presented in a report together with an
                     implementation roadmap to ensure the audit report is fully implemented.</p>
@@ -80,8 +80,8 @@
 </div>
 
 <div class="process-audit">
-    <div class="columns is-multiline is-flex is-flex-wrap-wrap-reverse">
-        <div class="column is-8-desktop">
+    <div class="flex flex-wrap-reverse -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-2/3 p-3">
             <h3 class="mb-4">The Audit</h3>
             <p>The Audit Score Card is checked against the 11 fundamental areas</p>
             <ul class="audit-list">
@@ -118,12 +118,12 @@
     <div class="solution-courses-block blue-links">
         <h3>Manufacturing and Operational Process Training Programs</h3>
 
-        <div class="columns is-multiline mx-2">
+        <div class="md:flex flex-wrap mx-2 -mt-3 mb-3 last:-mb-3">
             <?php if ($mp_query->have_posts()) : ?>
             <?php while ($mp_query->have_posts()) : $mp_query->the_post(); ?>
-            <div class="column is-6-desktop is-12-tablet my-2">
-                <a href="<?php echo get_permalink(); ?>">
-                    <div class="course-name is-flex">
+            <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 md:flex-none md:w-full my-2 p-3">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="course-name flex">
                         <i class="bi bi-caret-right-fill"></i>
                         <h5><?php the_title(); ?></h5>
                     </div>
@@ -139,22 +139,5 @@
         </div>
     </div>
 </div>
-
-<script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
-    }
-</script>
 
 <?php get_footer(); ?>

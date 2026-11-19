@@ -8,34 +8,34 @@
 <?php get_template_part('template-parts/header-meta'); ?>
 
 <div class="subsolution-section">
-    <div class="columns is-multiline">
-        <div class="column is-6-desktop is-12-mobile">
+    <div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full p-3">
             <?php the_content(); ?>
         </div>
-        <div class="column is-6-desktop cyber-security-img">
+        <div class="cyber-security-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
         </div>
     </div>
 </div>
 
 <div class="cyber-services">
-    <div class="columns">
-        <div class="column is-8-desktop is-offset-2-desktop">
+    <div class="md:flex -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-2/3 lg:ml-[16.6667%] p-3">
             <h3>We offer a range of services to help you secure your data and systems from cyber attacks, such as:</h3>
         </div>
     </div>
 
-    <div class="columns is-multiline">
-        <div class="column is-4-desktop is-6-tablet">
+    <div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/3 md:flex-none md:w-1/2 p-3">
             <h4> Data Protection & Privacy </h4>
             <p>We help you comply with data protection laws and regulations, and ensure that your data is handled
                 with respect and care.</p>
         </div>
-        <div class="column is-4-desktop is-6-tablet">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/3 md:flex-none md:w-1/2 p-3">
             <h4> Information Security Management </h4>
             <p>We help you establish and maintain a robust information security framework, and provide ongoing
                 support and guidance to manage your security risks.</p>
         </div>
-        <div class="column is-4-desktop is-6-tablet">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/3 md:flex-none md:w-1/2 p-3">
             <h4> IT System Audit and Assessments </h4>
             <p>We help you evaluate your IT systems and processes, and identify any vulnerabilities or gaps that
                 could compromise your security.</p>
@@ -59,8 +59,8 @@
             <?php if ($cyber_query->have_posts()) : ?>
             <?php while ($cyber_query->have_posts()) : $cyber_query->the_post(); ?>
             <div>
-                <a href="<?php echo get_permalink(); ?>">
-                    <div class="course-name is-flex">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="course-name flex">
                         <i class="bi bi-caret-right-fill" style="padding-right: 0.5em; font-size: 1.2rem;"></i>
                         <h5><?php the_title(); ?></h5>
                     </div>

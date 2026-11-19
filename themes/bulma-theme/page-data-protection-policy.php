@@ -5,13 +5,13 @@
 <?php get_header(); ?>
 
 <div class="page-hero-section">
-    <h1> <?php echo get_the_title(); ?> </h1>
-    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/header-vector.svg">
+    <h1> <?php the_title(); ?> </h1>
+    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/header-vector.svg">
 </div>
 
-<div class="columns single-block is-centered">
-    <div class='column is-three-quarters-desktop'>
-        <h1 class='has-text-centered font-weight-bold my-5 pb-3 single-title'><?php the_title(); ?></h1>
+<div class="single-block md:flex justify-center mb-3 last:-mb-3">
+    <div class='grow shrink basis-0 lg:flex-none lg:w-3/4 p-3'>
+        <h1 class='single-title text-center my-6 pb-3'><?php the_title(); ?></h1>
         <?php the_content(); ?>
     </div>
 </div>

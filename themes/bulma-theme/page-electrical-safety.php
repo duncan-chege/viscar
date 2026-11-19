@@ -9,11 +9,11 @@
 <?php get_template_part('template-parts/header-meta'); ?>
 
 <div class="subsolution-section">
-    <div class="columns is-multiline">
-        <div class="column is-6-desktop is-12-mobile">
+    <div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full p-3">
             <?php the_content(); ?>
         </div>
-        <div class="column is-6-desktop energy-safety-img">
+        <div class="energy-safety-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
         </div>
     </div>
 </div>
@@ -24,17 +24,17 @@
         $args = array(
             'post_type' => 'electrical-training',
         );
-        $wp_query= new WP_Query($args); 
+        $courses_query = new WP_Query($args); 
     ?>
 
     <div class="solution-courses-block blue-links">
         <h3>Our Training Programs</h3>
-        <div class="columns is-multiline mx-2">
-            <?php if ($wp_query->have_posts()) : ?>
-            <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-            <div class="column is-6-desktop is-12-tablet my-2">
-                <a href="<?php echo get_permalink(); ?>">
-                    <div class="course-name is-flex">
+        <div class="md:flex flex-wrap mx-2 -mt-3 mb-3 last:-mb-3">
+            <?php if ($courses_query->have_posts()) : ?>
+            <?php while ($courses_query->have_posts()) : $courses_query->the_post(); ?>
+            <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 md:flex-none md:w-full my-2 p-3">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="course-name flex">
                         <i class="bi bi-caret-right-fill"></i>
                         <h5><?php the_title(); ?></h5>
                     </div>
@@ -52,14 +52,14 @@
 </div>
 
 <div class="wah-equipment">
-    <div class="columns is-multiline is-flex is-flex-wrap-wrap-reverse">
-        <div class='column is-5-desktop is-12-mobile'>
+    <div class="flex flex-wrap-reverse -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class='grow shrink basis-0 lg:flex-none lg:w-5/12 max-md:flex-none max-md:w-full p-3'>
             <h4 class="mb-4"> Consultancy </h4>
             <ul>
                 <li>Electrical Safety Inspection and Audit</li>
             </ul>
 
-            <h4 class="mt-6 mb-4"> Supply of Electrical Safety Equipment </h4>
+            <h4 class="mt-12 mb-4"> Supply of Electrical Safety Equipment </h4>
             <ul>
                 <li>Insulated Gloves and Shoes</li>
                 <li>Insulated Mats and Platforms</li>
@@ -75,9 +75,9 @@
             </ul>
         </div>
 
-        <div class="column is-6-desktop is-12-mobile has-text-centered">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full text-center p-3">
             <div class="img-block">
-                <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/electrical-equipment.png">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/electrical-equipment.png">
             </div>
         </div>
     </div>

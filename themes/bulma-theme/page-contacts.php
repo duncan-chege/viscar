@@ -8,22 +8,22 @@
 
 <div class="page-hero-section">
 
-    <h1> <?php echo get_the_title(); ?> </h1>
+    <h1> <?php the_title(); ?> </h1>
 
-    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/header-vector.svg">
+    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/header-vector.svg">
 
 </div>
 
 <h3 class="contacts-title"> We are located in these 3 countries </h3>
 
 <div class="hq-section">
-    <h5 class="has-text-centered">OUR HEADQUARTERS</h5>
-    <div class="columns is-align-items-center">
-        <div class="column is-4-desktop">
+    <h5 class="text-center">OUR HEADQUARTERS</h5>
+    <div class="md:flex items-center -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/3 p-3">
             <h3 class="office-location">Kenya</h3>
             <p>Kasneb Towers, 10th Floor Matumbato Road Off Hospital Road Upper hill</p>
         </div>
-        <div class="column is-8-desktop">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-2/3 p-3">
             <div class="map-responsive">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7853716741856!2d36.80931211453847!3d-1.3037964990490596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f109437e94d1f%3A0x3e9e3afd9184daaf!2sViscar%20Industrial%20Capacity%20Limited!5e0!3m2!1sen!2ske!4v1679987828254!5m2!1sen!2ske"
@@ -35,9 +35,9 @@
 </div>
 
 <div class="regional-offices">
-    <h5 class="has-text-centered">OUR REGIONAL OFFICES</h5>
-    <div class="columns is-justify-content-space-between">
-        <div class="column is-5-desktop">
+    <h5 class="text-center">OUR REGIONAL OFFICES</h5>
+    <div class="md:flex justify-between -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-5/12 p-3">
             <div class="regional-bloc">
                 <h3 class="office-location">Uganda</h3>
 
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <div class="column is-5-desktop">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-5/12 p-3">
             <div class="regional-bloc">
                 <h3 class="office-location">Tanzania</h3>
 
@@ -64,9 +64,9 @@
 
 <div class="reach-out">
 
-    <div class="columns is-multiline">
+    <div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
 
-        <div class="column is-6-desktop is-12-tablet">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 md:flex-none md:w-full p-3">
 
             <h3>Get in touch with us via email or phone</h3>
 
@@ -83,7 +83,7 @@
 
         </div>
 
-        <div class="column is-6-desktop is-12-tablet">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 md:flex-none md:w-full p-3">
 
             <p class="m-0">Fill this form so we get an idea of how we can help you</p>
 

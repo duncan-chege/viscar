@@ -9,11 +9,11 @@
 <?php get_template_part('template-parts/header-meta'); ?>
 
 <div class="solution-section">
-    <div class="columns is-multiline is-flex is-flex-wrap-wrap-reverse">
-        <div class="column is-6-desktop is-12-mobile">
+    <div class="flex flex-wrap-reverse -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full p-3">
             <?php the_content(); ?>
         </div>
-        <div class="column is-6-desktop wah-img">
+        <div class="wah-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
         </div>
     </div>
 </div>
@@ -24,19 +24,19 @@
         $args = array(
             'post_type' => 'wah-trainings',
         );
-        $wp_query= new WP_Query($args); 
+        $courses_query = new WP_Query($args); 
     ?>
 
     <div class="solution-courses-block blue-links">
         <h3>Our Training Programs</h3>
         <p>We offer Certification from the Institute for Work at Height in collaboration with Group 583 Consulting.
         </p>
-        <div class="columns is-multiline mx-2">
-            <?php if ($wp_query->have_posts()) : ?>
-            <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-            <div class="column is-6-desktop is-12-tablet my-2">
-                <a href="<?php echo get_permalink(); ?>">
-                    <div class="course-name is-flex">
+        <div class="md:flex flex-wrap mx-2 -mt-3 mb-3 last:-mb-3">
+            <?php if ($courses_query->have_posts()) : ?>
+            <?php while ($courses_query->have_posts()) : $courses_query->the_post(); ?>
+            <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 md:flex-none md:w-full my-2 p-3">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="course-name flex">
                         <i class="bi bi-caret-right-fill"></i>
                         <h5><?php the_title(); ?></h5>
                     </div>
@@ -54,8 +54,8 @@
 </div>
 
 <div class="wah-equipment">
-    <div class="columns is-multiline">
-        <div class='column is-5-desktop'>
+    <div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class='grow shrink basis-0 lg:flex-none lg:w-5/12 p-3'>
             <h4 class="mb-4"> Equipment Supply and Installation </h4>
             <ul>
                 <li>Complete Fall Arrest Kit – Full Body Harness (Safety Helmet, Body Harness PLUS Padding c/w
@@ -71,7 +71,7 @@
                 <li>Scaffolding Equipment</li>
             </ul>
 
-            <h4 class="mt-6 mb-4"> Consultancy Services </h4>
+            <h4 class="mt-12 mb-4"> Consultancy Services </h4>
             <ul>
                 <li>Development of Fall Protection Plan</li>
                 <li>Height Safety Risk Assessments and Audits</li>
@@ -79,9 +79,9 @@
 
         </div>
 
-        <div class="column is-6-desktop has-text-centered">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 text-center p-3">
             <div class="img-block">
-                <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/wah-items.png">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/wah-items.png">
             </div>
         </div>
     </div>
@@ -89,13 +89,13 @@
 
 <div class="partnerships">
     <h3 class="pb-4">Partnerships and Collaborations</h3>
-    <div class="is-flex is-flex-wrap-wrap is-justify-content-space-evenly mt-5">
-        <a href="https://ifwh.co.za" target="_blank"><img class=""
-                src="<?php echo get_template_directory_uri(); ?>/assets/img/ifwh-logo.jpg"></a>
-        <a href="https://group583.com/" target="_blank"><img class=""
-                src="<?php echo get_template_directory_uri(); ?>/assets/img/group583-logo.jpg"></a>
-        <a href="https://evolutionsafety.co.za/" target="_blank"><img class=""
-                src="<?php echo get_template_directory_uri(); ?>/assets/img/ehs-logo.png"></a>
+    <div class="flex flex-wrap justify-evenly mt-6">
+        <a href="https://ifwh.co.za" target="_blank"><img
+                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/ifwh-logo.jpg"></a>
+        <a href="https://group583.com/" target="_blank"><img
+                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/group583-logo.jpg"></a>
+        <a href="https://evolutionsafety.co.za/" target="_blank"><img
+                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/ehs-logo.png"></a>
     </div>
 </div>
 

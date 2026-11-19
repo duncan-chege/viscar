@@ -7,28 +7,28 @@
 <?php get_header(); ?>
 
 <div class="page-hero-section">
-    <h1> <?php echo get_the_title(); ?> </h1>
-    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/header-vector.svg">
+    <h1> <?php the_title(); ?> </h1>
+    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/header-vector.svg">
 </div>
 
-<a href="<?php echo home_url(); ?>/product-enquiry" class="floating-contact">
+<a href="<?php echo esc_url(home_url('/')); ?>product-enquiry" class="floating-contact">
     <div>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/floating-icon.svg">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/floating-icon.svg">
         <p class="m-0"> PRODUCT <br> ENQUIRY </p>
     </div>
 </a>
 
 <div class="solution-section">
 
-    <div class="columns is-multiline is-flex is-flex-wrap-wrap-reverse">
+    <div class="flex flex-wrap-reverse -mx-3 -mt-3 mb-3 last:-mb-3">
 
-        <div class="column is-6-desktop is-12-mobile">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full p-3">
 
             <?php the_content(); ?>
 
         </div>
 
-        <div class="column is-6-desktop leadership-img">
+        <div class="leadership-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
 
         </div>
 
@@ -51,12 +51,12 @@
         <h2>Courses Under This Program</h2>
         <p>Each supplemented with mentorship</p>
 
-        <div class="columns is-multiline mx-2">
+        <div class="md:flex flex-wrap mx-2 -mt-3 mb-3 last:-mb-3">
             <?php if ($leap_query->have_posts()) : ?>
             <?php while ($leap_query->have_posts()) : $leap_query->the_post(); ?>
-            <div class="column is-6-desktop is-12-tablet my-2">
-                <a href="<?php echo get_permalink(); ?>">
-                    <div class="course-name is-flex">
+            <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 md:flex-none md:w-full my-2 p-3">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="course-name flex">
                         <i class="bi bi-caret-right-fill"></i>
                         <h5><?php the_title(); ?></h5>
                     </div>
@@ -82,14 +82,14 @@
 ?>
 
 <div class="extra-courses">
-    <div class="columns is-multiline">
-        <div class="column is-6-desktop is-6-tablet">
+    <div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 md:flex-none md:w-1/2 p-3">
             <h4>Other courses incorporated in the LEAP that are related to engineering are: </h4>
         </div>
         <?php if ($related_courses->have_posts()) : ?>
-        <div class="column is-4-desktop is-6-tablet">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/3 md:flex-none md:w-1/2 p-3">
             <?php while ($related_courses->have_posts()) : $related_courses->the_post(); ?>
-            <a href="<?php echo get_permalink(); ?>">
+            <a href="<?php the_permalink(); ?>">
                 <div class="course-name"><i class="bi bi-caret-right-fill"></i> <?php the_title(); ?>
                 </div>
             </a>

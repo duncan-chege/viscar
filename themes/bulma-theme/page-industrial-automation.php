@@ -7,32 +7,32 @@
 <?php get_header(); ?>
 
 <div class="page-hero-section">
-    <h1> <?php echo get_the_title(); ?> </h1>
-    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/header-vector.svg">
+    <h1> <?php the_title(); ?> </h1>
+    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/header-vector.svg">
 </div>
 
 <div class="solution-section">
-    <div class="columns is-multiline is-flex is-flex-wrap-wrap-reverse">
-        <div class="column is-6-desktop is-12-mobile">
+    <div class="flex flex-wrap-reverse -mx-3 -mt-3 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full p-3">
             <?php the_content(); ?>
         </div>
-        <div class="column is-6-desktop industrial-automation-img">
+        <div class="industrial-automation-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
         </div>
     </div>
 </div>
 
 
-<div class="columns is-multiline">
-    <div class="column is-12-desktop">
-        <p class="subsolution-title"> Our main focus areas are </h3>
+<div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
+    <div class="grow shrink basis-0 lg:flex-none lg:w-full p-3">
+        <p class="subsolution-title"> Our main focus areas are </p>
     </div>
 </div>
 
-<div class="columns is-multiline">
-    <div class="column is-3-desktop is-6-tablet is-offset-2-desktop">
-        <a href="<?php echo home_url(); ?>/industrial-controls-and-electronics" class="subsol-bloc">
+<div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
+    <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 md:flex-none md:w-1/2 lg:ml-[16.6667%] p-3">
+        <a href="<?php echo esc_url(home_url('/')); ?>industrial-controls-and-electronics" class="subsol-bloc">
             <div class="subsolution-links">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/industrial-controls-icon.svg" alt="">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/industrial-controls-icon.svg" alt="">
                 <div>
                     <p> Industrial Controls and Electronics </p>
                     <p> Learn More </p>
@@ -40,10 +40,10 @@
             </div>
         </a>
     </div>
-    <div class="column is-3-desktop is-6-tablet">
-        <a href="<?php echo home_url(); ?>/fluid-power-systems" class="subsol-bloc">
+    <div class="grow shrink basis-0 lg:flex-none lg:w-1/4 md:flex-none md:w-1/2 p-3">
+        <a href="<?php echo esc_url(home_url('/')); ?>fluid-power-systems" class="subsol-bloc">
             <div class="subsolution-links">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fluid-power-icon.svg" alt="">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/fluid-power-icon.svg" alt="">
                 <div>
                     <p> Fluid Power Systems </p>
                     <p> Learn More </p>
@@ -59,27 +59,27 @@
 </div>
 
 <div class="partnerships">
-    <h3 class="mb-6">Partnerships and Collaborations</h3>
-    <div class="splide">
+    <h3 class="mb-12">Partnerships and Collaborations</h3>
+    <div class="splide" data-splide='{"type":"loop","arrows":false,"pagination":false,"drag":"free","focus":"center","perPage":5,"autoScroll":{"speed":0.5}}' data-autoscroll>
         <div class="splide__track" id="splide-track">
             <div class="splide__list">
                 <div class="splide__slide">
-                    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/schneider-electric-logo.png">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/schneider-electric-logo.png">
                 </div>
                 <div class="splide__slide">
-                    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/festo-logo.png">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/festo-logo.png">
                 </div>
                 <div class="splide__slide">
-                    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/mitsubishi-logo.png">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/mitsubishi-logo.png">
                 </div>
                 <div class="splide__slide">
-                    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/allen-badley-logo.png">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/allen-badley-logo.png">
                 </div>
                 <div class="splide__slide">
-                    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/abb-logo.png">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/abb-logo.png">
                 </div>
                 <div class="splide__slide">
-                    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/bosch-logo.png">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/bosch-logo.png">
                 </div>
             </div>
         </div>
@@ -87,22 +87,6 @@
 </div>
 
 <?php get_footer(); ?>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        new Splide('.splide', {
-            arrows: false,
-            pagination: false,
-            type: 'loop',
-            drag: 'free',
-            focus: 'center',
-            perPage: 5,
-            autoScroll: {
-                speed: 0.5,
-            },
-        }).mount(window.splide.Extensions);
-    });
-</script>
 
 <!-- <div class="blue-bg solution-courses">
     <div></div>
@@ -119,8 +103,8 @@
             <?php if ($leap_query->have_posts()) : ?>
             <?php while ($leap_query->have_posts()) : $leap_query->the_post(); ?>
             <div>
-                <a href="<?php echo get_permalink(); ?>">
-                    <div class="course-name is-flex">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="course-name flex">
                         <i class="bi bi-caret-right-fill" style="padding-right: 0.5em; font-size: 1.2rem;"></i>
                         <h5><?php the_title(); ?></h5>
                     </div>
@@ -138,8 +122,8 @@
 
 <div class="support-center">
     <h2>Industrial Technical Support Center</h2>
-    <div class="columns is-multiline ml-6">
-        <div class="column is-6 pr-6">
+    <div class="md:flex flex-wrap -mt-3 -mr-3 ml-12 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 md:flex-none md:w-1/2 py-3 pr-12 pl-3">
             <p>The Viscar Industrial Technical Support Centre seeks to support our clients in enhancing their
                 equipment availability and reliability resulting in optimal performance and productivity of the plant.
                 We know that as a manufacturer you cannot afford downtime caused by equipment failure, the loss of a
@@ -152,7 +136,7 @@
             <p>Broader systems like PLCs, SCADA, DCS, Drives, Hydraulic Pneumatics, HVAC and Industrial Mechatronics,
                 Electrical and Electronics Controls</p>
         </div>
-        <div class="column is-6">
+        <div class="grow shrink basis-0 md:flex-none md:w-1/2 p-3">
         </div>
     </div>
 </div>
@@ -162,8 +146,8 @@
         <path fill="#ffffff" fill-opacity="1" d="M0,96L720,160L1440,96L1440,0L720,0L0,0Z"></path>
     </svg>
     <h3> Services offered are:</h3>
-    <div class="columns is-variable is-8 px-6">
-        <div class="column is-5">
+    <div class="md:flex -mx-3 -mt-3 px-12 mb-3 last:-mb-3">
+        <div class="grow shrink basis-0 md:flex-none md:w-5/12 p-3">
             <div class="equipment-repair">
                 <h4> Repair of Industrial Equipment and Components </h4>
                 <p> This involves diagnosis, troubleshooting and repair of industrial equipment and components faults
@@ -179,7 +163,7 @@
             </div>
         </div>
 
-        <div class="column is-6 is-offset-1">
+        <div class="grow shrink basis-0 md:flex-none md:w-1/2 md:ml-[8.3333%] p-3">
             <div class="design-automation">
                 <h4> Design, installation and commissioning and maintenance of automation projects </h4>
                 <p> This involves new projects, upgrades from manual to semi-automatic, semi-automatic to fully
@@ -200,8 +184,8 @@
     </div>
 </div>
 
-<div class="columns is-multiline">
-    <div class="column is-6">
+<div class="md:flex flex-wrap -mx-3 -mt-3 mb-3 last:-mb-3">
+    <div class="grow shrink basis-0 md:flex-none md:w-1/2 p-3">
         <div class="installation-automation">
             <h4 class="pb-4">Design, installation and commissioning and maintenance of automation projects</h4>
             <ul>
@@ -224,12 +208,12 @@
             </ul>
         </div>
     </div>
-    <div class="column is-6 project-automation"></div>
+    <div class="project-automation grow shrink basis-0 md:flex-none md:w-1/2 p-3"></div>
 </div>
 
-<div class="columns is-multiline my-6">
-    <div class="column is-6 automation-visual"></div>
-    <div class="column is-6">
+<div class="md:flex flex-wrap -mx-3 my-12">
+    <div class="automation-visual grow shrink basis-0 md:flex-none md:w-1/2 p-3"></div>
+    <div class="grow shrink basis-0 md:flex-none md:w-1/2 p-3">
         <div class="automation-projects">
             <h4 class="pb-4">Design, installation and commissioning and maintenance of automation projects</h4>
             <ul>

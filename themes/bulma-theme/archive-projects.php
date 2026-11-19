@@ -10,7 +10,7 @@
 
     <h1> Projects </h1>
 
-    <img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/header-vector.svg">
+    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/header-vector.svg">
 
 </div>
 
@@ -40,7 +40,7 @@ $proj_query= new WP_Query($args);
 
     <div class="project-block">
 
-        <a href="<?php echo get_permalink(); ?>">
+        <a href="<?php the_permalink(); ?>">
 
             <div><?php the_post_thumbnail(); ?></div>
 
@@ -60,7 +60,7 @@ $proj_query= new WP_Query($args);
 
     <?php else : ?>
 
-    <p class=""><?php _e( 'We are currently updating our projects' ); ?></p>
+    <p><?php _e( 'We are currently updating our projects' ); ?></p>
 
     <?php endif; ?>
 
