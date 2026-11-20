@@ -22,7 +22,6 @@ get_header();
                 <li class="splide__slide md:flex -mx-3 -mt-3 mb-3 last:-mb-3">
                     <div class="center-hero-text grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full">
                         <h1><?php the_title(); ?></h1>
-                        <h5> <?php echo wp_trim_words(get_the_excerpt(), 30, '...');  ?> </h5>
                         <a href="<?php the_permalink(); ?>"> View Event </a>
                     </div>
                     <div class="event-col-box grow shrink basis-0 lg:flex-none lg:w-1/2 max-md:flex-none max-md:w-full max-md:hidden p-0">

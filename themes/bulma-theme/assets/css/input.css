@@ -672,7 +672,7 @@
      column when the text is taller (e.g. long event titles on short screens); */
   .front-page-hero .splide__slide > div:not(:first-child) {
     height: auto;
-    min-height: clamp(60vh, 15vh + 50vw, 80vh);
+    min-height: clamp(360px, 30vw, 600px);
   }
 
   .front-page-hero .splide__slide h5 {
