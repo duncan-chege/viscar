@@ -668,9 +668,11 @@
     }
   }
 
-  /* Image column - fixed responsive height */
+  /* Image column - responsive minimum height. It stretches to match the text
+     column when the text is taller (e.g. long event titles on short screens); */
   .front-page-hero .splide__slide > div:not(:first-child) {
-    height: clamp(60vh, 15vh + 50vw, 80vh);
+    height: auto;
+    min-height: clamp(60vh, 15vh + 50vw, 80vh);
   }
 
   .front-page-hero .splide__slide h5 {
