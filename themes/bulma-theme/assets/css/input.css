@@ -476,7 +476,7 @@ layer(vendor);
     content: "\2212";
   }
 
-  /* ---------------------------------------------------------------- HEADER */
+  /* HEADER */
 
   #top-nav {
     @media (max-width: 1024px) {
@@ -742,7 +742,7 @@ layer(vendor);
     font-weight: 700;
   }
 
-  /* -------------------------------------------------------------- HOMEPAGE */
+  /* HOMEPAGE */
   .front-page-hero li.splide__slide {
     display: flex;
     flex-wrap: wrap-reverse;
@@ -1155,7 +1155,7 @@ layer(vendor);
     border-bottom: 2px dashed;
   }
 
-  /* ----------------------------------------------------------------- CARDS */
+  /* CARDS */
   .post-card {
     position: relative;
     max-width: 100%;
@@ -1292,7 +1292,7 @@ layer(vendor);
     align-items: center;
   }
 
-  /* ------------------------------------------------------------ PAGE HERO */
+  /* PAGE HERO */
   .page-hero-section {
     background: rgb(235, 39, 43);
     background: var(--gradient-brand);
@@ -1321,7 +1321,7 @@ layer(vendor);
     text-transform: capitalize;
   }
 
-  /* ------------------------------------------------------------ ABOUT PAGE */
+  /* ABOUT PAGE */
   .who-section,
   .milestones,
   .solution-section,
@@ -1885,7 +1885,7 @@ layer(vendor);
     margin: 0;
   }
 
-  /* --------------------------------------------------------- PROJECTS PAGE */
+  /* PROJECTS PAGE */
   .projects-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1938,7 +1938,7 @@ layer(vendor);
     text-transform: capitalize;
   }
 
-  /* --------------------------------------------------------- ARTICLES PAGE */
+  /* ARTICLES PAGE */
   .articles-heading {
     color: var(--color-viscar-red);
     font-weight: 900;
@@ -2054,7 +2054,7 @@ layer(vendor);
     color: #fff;
   }
 
-  /* ----------------------------------------------------------- SINGLE PAGE */
+  /* SINGLE PAGE */
   .single-title {
     border-bottom: 8px solid transparent;
     border-image: var(--gradient-brand-line);
@@ -2095,7 +2095,7 @@ layer(vendor);
     object-fit: cover;
   }
 
-  /* ------------------------------------------------------ SOLUTION SECTION */
+  /* SOLUTION SECTION */
   .solution-section h3 {
     color: var(--color-viscar-blue);
     font-weight: 900;
@@ -2285,7 +2285,7 @@ layer(vendor);
     width: fit-content;
   }
 
-  /* --------------------------------------------------- SUBSOLUTION SECTION */
+  /* SUBSOLUTION SECTION */
   .subsolution-section {
     margin: 3em 7em 3em 3em;
   }
@@ -2317,7 +2317,7 @@ layer(vendor);
     color: #fff;
   }
 
-  /* ---------------------------------------------- MANUFACTURING PROCESS PAGE */
+  /* MANUFACTURING PROCESS PAGE */
   .process-audit,
   .process-overview {
     margin: 0 7em 3em 3em;
@@ -2401,7 +2401,7 @@ layer(vendor);
     font-weight: 900;
   }
 
-  /* ---------------------------------------------------- ENERGY EFFICIENCY */
+  /* ENERGY EFFICIENCY */
   .energy-efficiency,
   .energy-audits {
     color: var(--color-viscar-blue);
@@ -2426,7 +2426,7 @@ layer(vendor);
     height: 80px;
   }
 
-  /* ----------------------------------------------------------- BREADCRUMBS */
+  /* BREADCRUMBS */
   .breadcrumb-section p {
     margin: 0;
     padding: 12px;
@@ -2442,7 +2442,7 @@ layer(vendor);
     color: #a2c8f9;
   }
 
-  /* -------------------------------------------------------- TRAININGS PAGE */
+  /* TRAININGS PAGE */
   .trainings-block {
     margin: 3em 10em;
   }
@@ -2505,7 +2505,7 @@ layer(vendor);
     background-color: #1b3f8b;
   }
 
-  /* ------------------------------------------------------- SINGLE TRAINING */
+  /* SINGLE TRAINING */
   .training-poster > img {
     height: auto;
     object-fit: contain;
@@ -2625,7 +2625,7 @@ layer(vendor);
     }
   }
 
-  /* --------------------------------------------------------- SINGLE COURSE */
+  /* SINGLE COURSE */
   .sidebar {
     height: 100%;
     position: sticky;
@@ -2718,7 +2718,7 @@ layer(vendor);
     }
   }
 
-  /* ---------------------------------------------------------- PROCESS PAGE */
+  /* PROCESS PAGE */
   .process-programs {
     margin-bottom: 4em;
   }
@@ -2873,7 +2873,7 @@ layer(vendor);
     object-fit: contain;
   }
 
-  /* ------------------------------------------------------- AUTOMATION PAGE */
+  /* AUTOMATION PAGE */
   .support-center h3 {
     color: var(--color-viscar-blue);
     font-weight: 900;
@@ -3016,14 +3016,14 @@ layer(vendor);
     margin: 0 3em;
   }
 
-  /* -------------------------------------------- OCCUPATIONAL HEALTH PAGE */
+  /* OCCUPATIONAL HEALTH PAGE */
   .occupational-consultancy > div:first-child {
     background-image: url(../img/consultancy-img.png);
     background-position-y: bottom;
     background-position-x: right;
   }
 
-  /* --------------------------------------------- SAFETY ENGINEERING PAGE */
+  /* SAFETY ENGINEERING PAGE */
   .safety-services,
   .consultancy-services {
     margin: 5em 3em 4em;
@@ -3061,7 +3061,7 @@ layer(vendor);
     margin: 0 auto;
   }
 
-  /* ----------------------------------------------------- FIRE SAFETY PAGE */
+  /* FIRE SAFETY PAGE */
   .consultancy-supply ul {
     color: var(--color-viscar-blue);
   }
@@ -3070,7 +3070,7 @@ layer(vendor);
     margin: 4em;
   }
 
-  /* ------------------------------------------------------- CONTACTS PAGE */
+  /* CONTACTS PAGE */
   .contacts-title {
     margin: 2em;
     text-align: center;
@@ -3167,7 +3167,7 @@ layer(vendor);
     position: absolute;
   }
 
-  /* --------------------------------------------------- SUBSCRIBE SECTION */
+  /* SUBSCRIBE SECTION */
   .subscribe-section {
     background-color: var(--color-viscar-blue);
     padding: 3em;
@@ -3191,7 +3191,7 @@ layer(vendor);
     margin: 1.5em;
   }
 
-  /* --------------------------------------------------- TELECOMMUNICATIONS */
+  /* TELECOMMUNICATIONS */
   .solution-list,
   .five-g-list,
   .wireless-list {
@@ -3240,7 +3240,7 @@ layer(vendor);
     color: var(--color-viscar-blue);
   }
 
-  /* ------------------------------------------------------ CYBER SECURITY */
+  /* CYBER SECURITY */
   .cyber-services,
   .iot-services,
   .contact-iot {
@@ -3282,7 +3282,7 @@ layer(vendor);
     line-height: 1.2;
   }
 
-  /* -------------------------------------------------------- IOT SOLUTIONS */
+  /* IOT SOLUTIONS */
   .iot-description {
     margin: 4em;
     color: var(--color-viscar-blue);
@@ -3409,7 +3409,7 @@ layer(vendor);
     margin: 0;
   }
 
-  /* ----------------------------------------------------- DATA CENTER PAGE */
+  /* DATA CENTER PAGE */
   .sub-services > div {
     margin: -1.2em 0;
 
@@ -3502,7 +3502,7 @@ layer(vendor);
     }
   }
 
-  /* ------------------------------------------------------------- 404 PAGE */
+  /* 404 PAGE */
   .error-section h5 {
     color: var(--color-viscar-blue);
     font-weight: 700;
@@ -3517,7 +3517,7 @@ layer(vendor);
     margin: 1em 0;
   }
 
-  /* ---------------------------------------------------- SINGLE EVENT PAGE */
+  /* SINGLE EVENT PAGE */
   h2#saa > div span {
     width: 100%;
     display: block;
@@ -3534,7 +3534,7 @@ layer(vendor);
     font-size: 2.2em;
   }
 
-  /* -------------------------------------------------------------- COURSES */
+  /* COURSES */
   .course-alert {
     position: relative;
     top: 0;
@@ -3582,7 +3582,7 @@ layer(vendor);
     border: 2px solid #fff;
   }
 
-  /* --------------------------------------------------------------- FOOTER */
+  /* FOOTER */
   .site-footer {
     background: var(--color-footer-blue) url(../img/footer-background.png);
     color: #fff;
@@ -3799,8 +3799,6 @@ layer(vendor);
     --btn-border-width: 0px;
     --btn-border-color: transparent;
     --btn-padding: 0.625rem 0.9375rem;
-    --btn-font-size: inherit;
-    --btn-font-weight: inherit;
     --btn-line-height: 1.5;
     --btn-radius: 10px;
   }
@@ -3813,8 +3811,9 @@ layer(vendor);
     border: var(--btn-border-width) solid var(--btn-border-color);
     border-radius: var(--btn-radius);
     font-family: var(--font-sans);
-    font-size: var(--btn-font-size);
-    font-weight: var(--btn-font-weight);
+    /* No default: unless a variant sets these, the button inherits from its parent. */
+    font-size: var(--btn-font-size, inherit);
+    font-weight: var(--btn-font-weight, inherit);
     line-height: var(--btn-line-height);
     text-align: center;
     cursor: pointer;
@@ -3876,7 +3875,7 @@ layer(vendor);
     }
   }
 
-  /* ------------------------------------------------------ Capabilities */
+  /* Capabilities */
   .hp-capabilities {
     padding: 5.625rem 2rem 0;
   }
@@ -3945,7 +3944,7 @@ layer(vendor);
     color: var(--color-hp-red);
   }
 
-  /* ------------------------------------------------------- CEO message */
+  /* CEO message */
   .hp-ceo {
     padding: 10rem 2rem 0;
 
@@ -4021,7 +4020,7 @@ layer(vendor);
     }
   }
 
-  /* ---------------------------------------------------- How we deliver */
+  /* How we deliver */
   .hp-deliver {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 588px;
@@ -4037,12 +4036,20 @@ layer(vendor);
     }
   }
 
+  /* The intro pins near the middle of the viewport while the page scroll
+     carries the delivery cards past it. Sticky is bounded by the grid row
+     (the height of the card board), so once the last card is in view the
+     intro is released and the section scrolls away normally. */
   .hp-deliver-intro {
-    padding-top: 14.5rem;
+    position: sticky;
+    top: max(2rem, calc(50vh - 7rem));
+    align-self: start;
+    margin-top: 14.5rem;
     max-width: 560px;
 
     @media (max-width: 1100px) {
-      padding-top: 0;
+      position: static;
+      margin-top: 0;
       max-width: none;
     }
   }
@@ -4232,7 +4239,7 @@ layer(vendor);
     background: var(--color-hp-red);
   }
 
-  /* -------------------------------------------------- Latest projects */
+  /* Latest projects */
   .hp-projects {
     max-width: 1442px;
     margin: 0 auto;
@@ -4330,7 +4337,7 @@ layer(vendor);
     text-align: center;
   }
 
-  /* ------------------------------------------------- Upcoming trainings */
+  /* Upcoming trainings */
   .hp-trainings {
     display: grid;
     grid-template-columns: 35.7% 1fr;
@@ -4436,7 +4443,7 @@ layer(vendor);
     text-align: center;
   }
 
-  /* ---------------------------------------------- Clients & partners */
+  /* Clients & partners */
   .hp-partners {
     padding: 6.875rem 2rem 0;
   }
@@ -4451,7 +4458,7 @@ layer(vendor);
     object-fit: contain;
   }
 
-  /* --------------------------------------------------- Closing CTA */
+  /* Closing CTA */
   .hp-cta {
     position: relative;
     z-index: 2;
