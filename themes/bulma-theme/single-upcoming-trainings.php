@@ -20,9 +20,9 @@
 
             <div class="training-buttons">
 
-                <a href="<?php echo esc_url(home_url('/')); ?>upcoming-trainings" class="back-trainings"> Back to Trainings </a>
+                <a href="<?php echo esc_url(home_url('/')); ?>upcoming-trainings" class="btn btn-sm btn-blue btn-invert"> Back to Trainings </a>
 
-                <button type="button" class="register" data-toggle="modal" data-target="#"> Register </button>
+                <button type="button" class="btn btn-sm btn-invert register" data-toggle="modal" data-target="#"> Register </button>
 
             </div>
 

@@ -19,8 +19,8 @@
                 </div>
             
                 <div class="training-buttons" style="justify-content: space-between;">
-                    <button type="button" class="register" data-toggle="modal" data-target="#"> Enrol </button>
-                    <a href="<?php echo esc_url(home_url('/')); ?>courses" class="back-trainings"> Back to Courses </a>
+                    <button type="button" class="btn btn-sm btn-invert register" data-toggle="modal" data-target="#"> Enrol </button>
+                    <a href="<?php echo esc_url(home_url('/')); ?>courses" class="btn btn-sm btn-blue btn-invert"> Back to Courses </a>
                 </div>
             </div>
         </div>

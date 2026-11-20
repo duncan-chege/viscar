@@ -12,7 +12,7 @@
             <h5> Though don’t worry, our navigation menu items show all our available pages. </h5>
 
             <div class="go-back">
-                <a href="<?php echo esc_url(home_url('/')); ?>">Back to homepage </a>
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="btn">Back to homepage </a>
             </div>
         </div>
 

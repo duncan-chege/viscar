@@ -67,7 +67,7 @@
                 <li>Research and Consulting Services on Regulations and Access & Impact Studies</li>
                 <li>Project Management</li>
             </ul>
-            <a href="#">Download Product Brochure <span><i class="bi bi-download pl-1"></i></span></a>
+            <a href="#" class="btn">Download Product Brochure <span><i class="bi bi-download pl-1"></i></span></a>
         </div>
         <div class="fiber-cable-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
         </div>
@@ -96,7 +96,7 @@
                 <li>Technology Complexity due to convergence</li>
                 <li>New and Emerging Technology is developing at a fast pace</li>
             </ul>
-            <a href="#">Download Product Brochure <span><i class="bi bi-download pl-1"></i></span></a>
+            <a href="#" class="btn">Download Product Brochure <span><i class="bi bi-download pl-1"></i></span></a>
         </div>
         <div class="telecoms-managed-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
         </div>
@@ -142,7 +142,7 @@
                 <li>Work at Height Training Courses</li>
                 <li>Telecoms EGDP (Graduate Training Program)</li>
             </ul>
-            <a href="#">Download Product Brochure <span><i class="bi bi-download pl-1"></i></span></a>
+            <a href="#" class="btn">Download Product Brochure <span><i class="bi bi-download pl-1"></i></span></a>
         </div>
         <div class="telecoms-training-img grow shrink basis-0 lg:flex-none lg:w-1/2 p-3">
         </div>

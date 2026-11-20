@@ -62,28 +62,24 @@
 
                 <a href="https://www.linkedin.com/company/viscar-industrial-capacity/" target="_blank"><i
                         class="bi bi-linkedin px-3" style="font-size: 1.8rem;"></i></a>
-
-                <a href="https://www.youtube.com/@viscarindustrialcapacity" target="_blank"><i
-                        class="bi bi-youtube px-3" style="font-size: 1.8rem;"></i></a>
-
             </div>
 
             <h5 class="pt-12 pb-3" style="font-weight:600;"> Our Regional Offices</h5>
 
-                <div class="regional-sites flex">
-                    <a href="https://viscarconsulting.co.ug/" target="_blank">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/ugandan-flag.png"
-                            alt="Uganda" /> <span> UG </span>
-                    </a>
-                    <a href="https://www.viscarconsulting.co.tz/" target="_blank">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/tanzanian-flag.png"
-                            alt="Tanzania" /> <span> TZ </span>
-                    </a>
-                </div>
+            <div class="regional-sites flex">
+                <a href="https://viscarconsulting.co.ug/" target="_blank">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/ugandan-flag.png"
+                        alt="Uganda" /> <span> UG </span>
+                </a>
+                <a href="https://www.viscarconsulting.co.tz/" target="_blank">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/tanzanian-flag.png"
+                        alt="Tanzania" /> <span> TZ </span>
+                </a>
+            </div>
 
-                <div class="iso">
-                    <p> ISO Certified: ISO 9001:2015 </p>
-                </div>
+            <div class="iso">
+                <p> ISO Certified: ISO 9001:2015 </p>
+            </div>
 
         </div>
     </div>
