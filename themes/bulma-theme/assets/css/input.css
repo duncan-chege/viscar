@@ -914,31 +914,24 @@ layer(vendor);
   }
 
   .solutions,
-  .services,
-  .articles,
-  .partners-section {
+  .services {
     padding: 1em 3em 3em;
   }
 
   .solutions,
-  .services,
-  .articles {
+  .services {
     @media (min-width: 768px) and (max-width: 1024px) {
       padding: 2em 2em 6em;
     }
   }
 
   .solutions h2,
-  .services h2,
-  .articles h2,
-  .partners-section h2 {
+  .services h2 {
     color: var(--color-viscar-red);
     padding: 1.5em 0;
     text-align: center;
   }
 
-  .sol-block,
-  .serv-block,
   .subsol-bloc {
     padding: 1em;
     background: #fff;
@@ -956,14 +949,10 @@ layer(vendor);
     text-align: left;
   }
 
-  .sol-block:hover,
-  .serv-block:hover,
   .subsol-bloc:hover {
     transform: translateY(-10px);
   }
 
-  .serv-block::before,
-  .serv-block::after,
   .subsol-bloc::before,
   .subsol-bloc::after {
     content: "";
@@ -977,21 +966,7 @@ layer(vendor);
     border-top-left-radius: 10px;
   }
 
-  .sol-block::before,
-  .sol-block::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: var(--color-viscar-blue);
-    height: 4px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-  }
 
-  .sol-block::before,
-  .serv-block::before,
   .subsol-bloc::before {
     width: 0;
     opacity: 0;
@@ -1001,16 +976,12 @@ layer(vendor);
     transition-delay: 0.5s;
   }
 
-  .sol-block::after,
-  .serv-block::after,
   .subsol-bloc::after {
     width: 100%;
     background: #fff;
     transition: width 0.5s ease;
   }
 
-  .sol-block:hover::before,
-  .serv-block:hover::before,
   .subsol-bloc:hover::before {
     width: 100%;
     opacity: 1;
@@ -1020,39 +991,15 @@ layer(vendor);
     transition-delay: 0;
   }
 
-  .sol-block:hover::after,
-  .serv-block:hover::after,
   .subsol-bloc:hover::after {
     width: 0;
     opacity: 0;
     transition: width 0 ease;
   }
 
-  .sol-block > div,
-  .serv-block > div {
-    padding-top: 1em;
-  }
 
-  .sol-block h5,
-  .serv-block h5 {
-    font-weight: 700;
-  }
 
-  .sol-block p,
-  .serv-block p {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px;
-    line-height: 1;
-    border-bottom: 2px dashed;
-    padding-bottom: 5px;
-  }
 
-  .sol-block:hover h5,
-  .sol-block:hover p {
-    color: var(--color-viscar-blue);
-  }
 
   .subsol-bloc:hover p {
     color: var(--color-viscar-red) !important;
@@ -1062,21 +1009,8 @@ layer(vendor);
     height: 80px;
   }
 
-  .serv-block {
-    color: var(--color-viscar-red);
-    width: 240px;
-  }
 
-  .serv-block img {
-    width: 130px;
-  }
 
-  .sol-block,
-  .serv-block {
-    @media (min-width: 320px) and (max-width: 767px) {
-      width: 100%;
-    }
-  }
 
   .wires {
     background: url(../img/colored-cables.svg) repeat-x;
@@ -1111,9 +1045,6 @@ layer(vendor);
     background-position-y: center;
   }
 
-  .trainings-section {
-    padding-bottom: 3em;
-  }
 
   .red-bg h2,
   .blue-bg h2 {
@@ -1134,26 +1065,10 @@ layer(vendor);
     text-transform: capitalize;
   }
 
-  .training-date {
-    font-size: 15px;
-    margin: 10px 0;
-  }
 
-  .trainings-section p {
-    font-size: 15px;
-  }
 
-  .trainings-section a:hover {
-    background: #d5e4ff;
-  }
 
-  .trainings-section a:not(.more-trainings) {
-    padding: 10px 15px 0 10px;
-  }
 
-  .training-link {
-    border-bottom: 2px dashed;
-  }
 
   /* CARDS */
   .post-card {
@@ -1251,11 +1166,6 @@ layer(vendor);
     font-size: 15px;
   }
 
-  .articles .post-card {
-    @media (min-width: 320px) and (max-width: 767px) {
-      width: 100%;
-    }
-  }
 
   /* Partner logos */
   .grid-container {
@@ -1321,9 +1231,7 @@ layer(vendor);
     text-transform: capitalize;
   }
 
-  /* ABOUT PAGE */
-  .who-section,
-  .milestones,
+  /* Content sections shared by the solution and service pages */
   .solution-section,
   .optical-solutions,
   .cloud-environments,
@@ -1346,7 +1254,6 @@ layer(vendor);
     }
   }
 
-  .who-section h2,
   .solution-section h2,
   .optical-solutions h3,
   .five-g h3,
@@ -1365,16 +1272,7 @@ layer(vendor);
     font-weight: 900;
   }
 
-  .who-section h2::after {
-    content: "";
-    display: block;
-    margin: 0;
-    width: 50%;
-    padding-top: 10px;
-    border-bottom: 4px solid var(--color-viscar-red);
-  }
 
-  .who-section p,
   .solution-section p,
   .solution-section ol,
   .optical-solutions p,
@@ -1389,7 +1287,6 @@ layer(vendor);
   }
 
   /* Section images */
-  .origin-img,
   .leadership-img,
   .digital-transformation-img,
   .process-optimization-img,
@@ -1694,59 +1591,14 @@ layer(vendor);
     }
   }
 
-  .vision-mission {
-    background: url(../img/vison-bg.png) #2a416a;
-    background-size: cover;
-    background-attachment: fixed;
-    margin: 5em 0;
-    padding: 0 2em;
-  }
 
-  .vision-mission > div {
-    padding: 8em 0;
 
-    @media (min-width: 320px) and (max-width: 767px) {
-      padding: 3em 0;
-    }
-  }
 
-  .mission,
-  .vision,
-  .brand-promise {
-    background: #fff;
-    padding: 1.5em;
-    border-radius: 10px 10px 0 0;
-    height: 250px;
 
-    @media (max-width: 1024px) {
-      height: auto;
-    }
-  }
 
-  .vision-mission p {
-    padding-top: 1em;
-  }
 
-  .image-breaks img {
-    object-fit: cover;
-  }
 
-  .image-breaks {
-    margin-bottom: 7em;
-
-    @media (min-width: 320px) and (max-width: 767px) {
-      margin-bottom: 0em;
-    }
-  }
-
-  .milestones h2,
-  .testimonials h2 {
-    text-align: center;
-    color: var(--color-viscar-blue);
-    margin: 2em 0 1em;
-  }
-
-  /* Tab navigation (milestones, courses) */
+  /* Tab navigation (courses archive) */
   .tab-nav {
     -webkit-overflow-scrolling: touch;
     display: flex;
@@ -1819,71 +1671,17 @@ layer(vendor);
     border-bottom-color: transparent !important;
   }
 
-  #tab-content > div {
-    background: var(--color-light-blue);
-    padding: 1em 2em;
-  }
 
-  .choose-us {
-    background: url(../img/chosen-bg.png) #0624b9;
-    background-attachment: fixed;
-    margin: 5em 0;
-    padding: 0 3em 5em 3em;
-  }
 
-  .choose-us h2 {
-    color: #fff;
-    margin: 2em 0;
-  }
 
-  .choose-us .pill {
-    padding: 3em;
-    position: relative;
-    color: #fff;
-    border-radius: 10px;
-    height: 130px;
-  }
 
-  .pill.blue {
-    background: #699bf7;
-  }
 
-  .pill.red {
-    background: #ed7173;
-  }
 
-  .pill img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 55px;
-  }
 
-  .feedback {
-    margin: 4em 0;
-  }
 
-  .feedback .splide__slide {
-    margin: 0 1em;
-    border-radius: 10px;
-    padding: 0.5em 1em 2em 1em;
-    max-width: max-content;
-    min-width: 300px;
-    height: 100%;
-  }
 
-  .feedback .splide__slide:nth-child(odd) {
-    background-color: rgba(252, 166, 168, 0.21);
-  }
 
-  .feedback .splide__slide:nth-child(even) {
-    background-color: rgba(105, 155, 247, 0.54);
-  }
 
-  .feedback .role {
-    font-size: 0.9rem;
-    margin: 0;
-  }
 
   /* PROJECTS PAGE */
   .projects-section {
@@ -3637,8 +3435,6 @@ layer(vendor);
   .cyber-services,
   .solutions,
   .services,
-  .articles,
-  .partners-section,
   .brief-text,
   .equipment-repair,
   .fire-safety-equipment {
@@ -3683,8 +3479,6 @@ layer(vendor);
   }
 
   /* Section margins on tablet / mobile */
-  .who-section,
-  .milestones,
   .solution-section,
   .optical-solutions,
   .five-g,
@@ -3707,8 +3501,6 @@ layer(vendor);
     }
   }
 
-  .who-section,
-  .milestones,
   .solution-section,
   .optical-solutions,
   .five-g,
@@ -3740,7 +3532,6 @@ layer(vendor);
     }
   }
 
-  .who-section p,
   .optical-solutions p,
   .five-g p,
   .wireless-solutions p {
@@ -3753,7 +3544,6 @@ layer(vendor);
     }
   }
 
-  .who-section p,
   .solution-section p,
   .optical-solutions p,
   .five-g p,
@@ -3861,700 +3651,29 @@ layer(vendor);
   }
 
   /* ========================================================================
-     HOMEPAGE (front-page.php, from "Our Capabilities" down)
+     HOMEPAGE + ABOUT PAGE
+     Both pages are styled with Tailwind utilities in their templates. These
+     are the only rules utilities can't express cleanly.
      ======================================================================== */
-  .hp-title {
-    color: var(--color-hp-red);
-    font-size: 2.25rem;
-    font-weight: 800;
-    line-height: 1.2;
-    text-align: center;
 
-    @media (max-width: 767px) {
-      font-size: 1.75rem !important;
-    }
-  }
-
-  /* Capabilities */
-  .hp-capabilities {
-    padding: 5.625rem 2rem 0;
-  }
-
-  .hp-cap-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 80px;
-    column-gap: 2rem;
-    max-width: 930px;
-    margin: 3.75rem auto 0;
-
-    @media (max-width: 767px) {
-      grid-template-columns: 1fr;
-      row-gap: 48px;
-      max-width: 360px;
-      margin-top: 2.5rem;
-    }
-  }
-
-  .hp-cap {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .hp-cap-icon {
-    position: relative;
-    flex: 0 0 140px;
-    height: 116px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-
-  .hp-cap-icon img {
-    position: relative;
-    width: 105px;
-    max-height: 116px;
-    object-fit: contain;
-  }
-
-  .hp-cap:hover .hp-cap-icon::before {
-    transform: translateY(-50%) scale(1.08);
-  }
-
-  .hp-cap h4 {
-    color: var(--color-hp-navy);
-    font-weight: 700;
-    line-height: 1.1;
-  }
-
-  .hp-learn-more {
-    display: inline-block;
-    margin-top: 1.375rem;
-    padding-bottom: 0.125rem;
-    color: var(--color-hp-link);
-    font-size: 1rem;
-    font-weight: 700;
-    border-bottom: 2px solid currentColor;
-    transition: color 0.3s;
-  }
-
-  .hp-cap:hover .hp-learn-more,
-  .hp-cap:hover .hp-cap-body h4 {
-    color: var(--color-hp-red);
-  }
-
-  /* CEO message */
-  .hp-ceo {
-    padding: 10rem 2rem 0;
-
-    @media (max-width: 767px) {
-      padding-top: 5.625rem;
-    }
-  }
-
-  .hp-ceo-card {
-    position: relative;
-    max-width: 961px;
-    margin: 3.125rem auto 0;
-    border-radius: 16px;
-    overflow: hidden;
-    background: var(--color-hp-blue);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-    color: #fff;
-  }
-
-  .hp-ceo-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-
-    @media (max-width: 767px) {
-      display: none;
-    }
-  }
-
-  .hp-ceo-content {
-    position: relative;
-    padding: 3.75rem 4.625rem 2.125rem 2.375rem;
-
-    @media (max-width: 767px) {
-      padding: 2.25rem 1.5rem 1.75rem;
-    }
-  }
-
-  .hp-ceo-intro {
-    max-width: 740px;
-    font-weight: 700;
-    line-height: 1.2;
-  }
-
-  .hp-ceo blockquote {
-    margin-top: 3rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 1.33;
-
-    @media (max-width: 767px) {
-      margin-top: 1.75rem;
-      font-size: 1.35rem;
-    }
-  }
-
-  .hp-ceo-name {
-    margin-top: 4rem;
-    font-weight: 500;
-    line-height: 1.35;
-
-    @media (max-width: 767px) {
-      margin-top: 2.5rem;
-    }
-  }
-
-  .hp-ceo + .wires {
-    margin: 9.375rem 0 0;
-
-    @media (max-width: 767px) {
-      margin-top: 5rem;
-    }
-  }
-
-  /* How we deliver */
-  .hp-deliver {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 588px;
-    column-gap: 2rem;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 8.75rem 7.375rem 0 2.875rem;
-
-    @media (max-width: 1100px) {
-      grid-template-columns: 1fr;
-      row-gap: 48px;
-      padding: 5.625rem 2rem 0;
-    }
-  }
-
-  /* The intro pins near the middle of the viewport while the page scroll
-     carries the delivery cards past it. Sticky is bounded by the grid row
-     (the height of the card board), so once the last card is in view the
-     intro is released and the section scrolls away normally. */
-  .hp-deliver-intro {
-    position: sticky;
-    top: max(2rem, calc(50vh - 7rem));
-    align-self: start;
-    margin-top: 14.5rem;
-    max-width: 560px;
-
-    @media (max-width: 1100px) {
-      position: static;
-      margin-top: 0;
-      max-width: none;
-    }
-  }
-
-  .hp-deliver-intro h2 {
-    color: var(--color-hp-red);
-    font-size: 2.25rem;
-    font-weight: 800;
-    line-height: 1.2;
-
-    @media (max-width: 767px) {
-      font-size: 1.75rem !important;
-    }
-  }
-
-  .hp-deliver-intro p {
-    margin-top: 2.75rem;
-    color: #373773;
-    font-size: 1.1rem;
-    font-weight: 500;
-    line-height: 1.1;
-
-    @media (max-width: 1100px) {
-      margin-top: 1.5rem;
-      line-height: 1.35;
-    }
-  }
-
-  .hp-deliver-board {
-    position: relative;
-    display: flex;
-    gap: 68px;
-    width: 588px;
-
-    @media (max-width: 1100px) {
-      margin: 0 auto;
-    }
-
-    @media (max-width: 640px) {
-      flex-direction: column;
-      gap: 24px;
-      width: 100%;
-      max-width: 320px;
-    }
-  }
-
-  .hp-deliver-panel {
-    position: absolute;
-    left: 123px;
-    top: 185px;
-    width: 327px;
-    height: 616px;
-    background: var(--color-hp-ice);
-  }
-
-  .hp-deliver-curve {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 588px;
-    height: 1040px;
-    fill: none;
-    stroke: var(--color-hp-navy);
-    stroke-width: 22;
-    stroke-linecap: round;
-  }
-
-  .hp-deliver-panel,
-  .hp-deliver-curve {
-    @media (max-width: 640px) {
-      display: none;
-    }
-  }
-
-  .hp-deliver-col {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 43px;
-    width: 260px;
-
-    @media (max-width: 640px) {
-      gap: 24px;
-      width: 100%;
-    }
-  }
-
-  .hp-deliver-col.is-red {
-    padding-top: 84px;
-
-    @media (max-width: 640px) {
-      padding-top: 0;
-    }
-  }
-
-  .hp-mode {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 276px;
-    padding: 2rem 1.375rem 1.125rem;
-    background: #fff;
-    border: 1px solid #ababad;
-    border-radius: 14px;
-    text-align: center;
-    transition:
-      border-color 0.3s,
-      box-shadow 0.3s;
-  }
-
-  .hp-deliver-col.is-red .hp-mode:nth-child(2) {
-    min-height: 298px;
-  }
-
-  .hp-deliver-col.is-red .hp-mode:nth-child(3) {
-    min-height: 288px;
-  }
-
-  /* The featured card shows the active state until another card is hovered. */
-  .hp-deliver-board:not(:hover) .hp-mode.is-featured,
-  .is-blue .hp-mode:hover {
-    border: 2px solid var(--color-hp-navy);
-    padding: calc(2rem - 1px) calc(1.375rem - 1px) calc(1.125rem - 1px);
-  }
-
-  .is-red .hp-mode:hover {
-    border: 2px solid var(--color-hp-red);
-    padding: calc(2rem - 1px) calc(1.375rem - 1px) calc(1.125rem - 1px);
-  }
-
-  .hp-mode-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 83px;
-    height: 83px;
-    border-radius: 50%;
-    background: var(--color-hp-ice);
-  }
-
-  .is-red .hp-mode-icon {
-    background: var(--color-hp-pink);
-  }
-
-  .hp-mode-icon img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-  }
-
-  .hp-mode h3 {
-    margin-top: 1.125rem;
-    color: var(--color-hp-navy);
-    font-size: 1.125rem;
-    font-weight: 700;
-    line-height: 1.1;
-  }
-
-  .is-red .hp-mode h3 {
-    color: var(--color-hp-red);
-  }
-
-  .hp-mode p {
-    margin: 0.875rem 0 1.25rem;
-    padding: 0 0.75rem;
-    color: #222;
-    font-size: 0.95rem;
-    font-weight: 500;
-    line-height: 1.1;
-  }
-
-  .hp-mode-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    margin-top: auto;
-    border-radius: 50%;
-    background: var(--color-hp-navy);
-    color: #fff;
-    font-size: 0.7rem;
-    -webkit-text-stroke: 1px #fff;
-  }
-
-  .is-red .hp-mode-arrow {
-    background: var(--color-hp-red);
-  }
-
-  /* Latest projects */
-  .hp-projects {
-    max-width: 1442px;
-    margin: 0 auto;
-    padding: 5.625rem 2.875rem 0;
-
-    @media (max-width: 767px) {
-      padding: 4.375rem 2rem 0;
-    }
-  }
-
-  .hp-project-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 30px;
-    margin: 3rem 0 3rem;
-
-    @media (max-width: 1100px) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 32px;
-    }
-
-    @media (max-width: 640px) {
-      grid-template-columns: 1fr;
-      margin: 2.25rem 0 3rem;
-    }
-  }
-
-  .hp-project {
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    transition: transform 0.3s ease;
-  }
-
-  .hp-project:hover {
-    transform: translateY(-6px);
-  }
-
-  .hp-project-img {
-    height: 240px;
-    overflow: hidden;
-  }
-
-  .hp-project-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease-in-out;
-  }
-
-  .hp-project:hover .hp-project-img img {
-    transform: scale(1.08);
-  }
-
-  .hp-project-body {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    min-height: 198px;
-    padding: 1rem 0.9375rem 1.375rem;
-  }
-
-  .hp-project-body h3 {
-    color: var(--color-hp-navy);
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 1.05;
-  }
-
-  .hp-read-more {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: auto;
-    padding-top: 1.5rem;
-    color: var(--color-hp-navy);
-    font-size: 0.95rem;
-    font-weight: 500;
-  }
-
-  .hp-read-more i {
-    font-size: 0.75rem;
-    -webkit-text-stroke: 0.5px currentColor;
-  }
-
-  .hp-project:hover h3,
-  .hp-project:hover .hp-read-more {
-    color: var(--color-hp-red);
-  }
-
-  .hp-empty {
-    margin: 2.5rem 0;
-    color: var(--color-hp-navy);
-    text-align: center;
-  }
-
-  /* Upcoming trainings */
-  .hp-trainings {
-    display: grid;
-    grid-template-columns: 35.7% 1fr;
-    margin-top: 7.3125rem;
-    background: var(--color-hp-ice);
-
-    @media (max-width: 767px) {
-      grid-template-columns: 1fr;
-      margin-top: 4.375rem;
-    }
-  }
-
-  .hp-trainings-img {
-    min-height: 300px;
-    background: url(../img/trainings-img.png) center / cover no-repeat;
-  }
-
-  .hp-trainings-content {
-    padding: 2.75rem 2rem 1.5rem;
-
-    @media (max-width: 767px) {
-      padding: 2.5rem 2rem;
-    }
-  }
-
-  .hp-trainings-content h3 {
-    color: var(--color-hp-navy);
-    font-weight: 800;
-    line-height: 1.2;
-    text-align: center;
-
-    @media (max-width: 767px) {
-      font-size: 1.75rem !important;
-    }
-  }
-
-  .hp-training-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 340px));
-    column-gap: 95px;
-    margin: 3rem 0 0 3rem;
-
-    @media (max-width: 1100px) {
-      column-gap: 40px;
-      margin-left: 0;
-    }
-
-    @media (max-width: 767px) {
-      grid-template-columns: 1fr;
-      margin-top: 2.25rem;
-    }
-  }
-
-  .hp-training {
-    padding-bottom: 1.5rem;
-  }
-
-  .hp-training:nth-child(n + 3) {
-    padding-top: 1.625rem;
-    background: linear-gradient(
-        to right,
-        var(--color-hp-navy) 55%,
-        transparent 0
-      )
-      top left / 19px 2px repeat-x;
-  }
-
-  /* Single column: a dashed rule between every item */
-  .hp-training:nth-child(n + 2) {
-    @media (max-width: 767px) {
-      padding-top: 1.625rem;
-      background: linear-gradient(
-          to right,
-          var(--color-hp-navy) 55%,
-          transparent 0
-        )
-        top left / 19px 2px repeat-x;
-    }
-  }
-
-  .hp-training h5 {
-    color: var(--color-hp-navy);
-    font-weight: 700;
-    line-height: 1.1;
-    text-transform: capitalize;
-    transition: color 0.3s;
-  }
-
-  .hp-training:hover h5 {
-    color: var(--color-hp-red);
-  }
-
-  .hp-training p {
-    margin-top: 0.625rem;
-    color: #5e5e5e;
-    font-size: 1rem;
-    font-weight: 500;
-  }
-
-  .hp-trainings-content .soon-trainings {
-    margin-top: 3.75rem;
-    color: var(--color-hp-navy);
-    text-align: center;
-  }
-
-  /* Clients & partners */
-  .hp-partners {
-    padding: 6.875rem 2rem 0;
-  }
-
-  .hp-partners .hp-title {
-    padding: 0 0 3.125rem;
-    color: var(--color-hp-red);
-  }
-
-  .hp-partners .image-container img {
-    max-height: 100px;
-    object-fit: contain;
-  }
-
-  /* Closing CTA */
-  .hp-cta {
-    position: relative;
-    z-index: 2;
-    margin-bottom: -6.875rem;
-    padding: 7.5rem 2rem 0;
-
-    @media (max-width: 767px) {
-      margin-bottom: -3.75rem;
-      padding-top: 4.375rem;
-    }
-  }
-
-  .hp-cta-card {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 2rem;
-    max-width: 1063px;
-    min-height: 330px;
-    margin: 0 auto;
-    padding: 4rem 8rem 4rem 4rem;
-    border-radius: 18px;
-    overflow: hidden;
-    background: var(--color-hp-navy);
-    color: #fff;
-
-    @media (max-width: 1100px) {
-      padding-right: 3.5625rem;
-    }
-
-    @media (max-width: 767px) {
-      flex-direction: column;
-      min-height: 0;
-      padding: 2.5rem 1.5rem;
-      background: var(--color-hp-blue);
-    }
-  }
-
-  .hp-cta-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-
-    @media (max-width: 767px) {
-      display: none;
-    }
-  }
-
-  .hp-cta-text {
-    position: relative;
-    max-width: 520px;
-  }
-
-  .hp-cta-text h2 {
-    font-size: 2.3rem;
-    font-weight: 800;
-    line-height: 1.2;
-
-    @media (max-width: 767px) {
-      font-size: 1.6rem !important;
-    }
-  }
-
-  .hp-cta-text p {
-    max-width: 500px;
-    margin-top: 3.125rem;
-    padding-left: 0.25rem;
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: 1.33;
-
-    @media (max-width: 767px) {
-      margin-top: 1.25rem;
-      padding-left: 0;
-    }
-  }
-
-  .hp-cta-card .btn {
-    --btn-padding: 0.5625rem 0.75rem;
-    position: relative;
-    flex-shrink: 0;
-    margin: 4.5625rem 0 0;
-
-    @media (max-width: 767px) {
-      margin-top: 0.5rem;
-    }
-  }
-
-  /* The CTA card overlaps the top of the footer on the homepage. */
+  /* The homepage CTA card overlaps the top of the shared footer, so the
+     footer needs matching top padding on the homepage only. */
   .home .site-footer {
     padding-top: calc(6.875rem + 3em);
 
     @media (max-width: 767px) {
       padding-top: calc(3.75rem + 2em) !important;
+    }
+  }
+
+  /* About page: V-shaped top edge of the slogan/mission band. The clip-path
+     also confines the band's fixed (parallax) background photo to the band,
+     so it must stay on this section at every screen size. */
+  .ab-notch-top {
+    clip-path: polygon(0 0, 53.3% 5.5rem, 100% 0, 100% 100%, 0 100%);
+
+    @media (max-width: 767px) {
+      clip-path: polygon(0 0, 53.3% 2.5rem, 100% 0, 100% 100%, 0 100%);
     }
   }
 }
