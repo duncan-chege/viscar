@@ -3,10 +3,8 @@
  * Each feature only runs when its markup is on the page.
  */
 
-/* ------------------------------------------------------------------ */
 /* Data center / broadband pages: service tabs (desktop) and picker (mobile).
  * Called from onclick attributes in the page templates, so they stay global. */
-/* ------------------------------------------------------------------ */
 function showService(serviceId) {
   document.querySelectorAll(".sub-services").forEach((section) => {
     section.style.display = section.id === serviceId ? "block" : "none";
@@ -32,7 +30,7 @@ window.dropService = function (serviceId, menuItem) {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  /* ---------------------------------------------- Mobile drawer menu */
+  /* Mobile drawer menu */
   const mobileToggle = document.getElementById("mobile-menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileClose = document.getElementById("mobile-menu-close");
@@ -65,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* ------------------------------- Lazy loading for images with data-src */
+  /* Lazy loading for images with data-src */
   if ("IntersectionObserver" in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
@@ -83,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("img[data-src]").forEach((img) => imageObserver.observe(img));
   }
 
-  /* ------------------------------------------------ Splide carousels */
+  /* Splide carousels */
   // Options come from each element's data-splide attribute.
   if (window.Splide) {
     document.querySelectorAll(".splide[data-splide]").forEach((el) => {
@@ -96,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* --------------------------------- Home page: partner logo rotation */
+  /* Home page: partner logo rotation */
   const firstRow = document.getElementById("first-row");
   const secondRow = document.getElementById("second-row");
   if (firstRow && secondRow) {
@@ -113,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 300000);
   }
 
-  /* -------------------------------------------- About page: milestone tabs */
+  /* About page: milestone tabs */
   document.querySelectorAll("[data-tabs]").forEach((tabNav) => {
     const tabs = tabNav.querySelectorAll("li[data-target]");
     const panels = document.querySelectorAll("#tab-content > div");
@@ -129,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  /* --------------------------------------- Courses archive: category tabs */
+  /* Courses archive: category tabs */
   document.querySelectorAll("[data-course-tabs]").forEach((tabNav) => {
     const tabs = tabNav.querySelectorAll("li[data-category]");
     const cards = document.querySelectorAll(".courses-bloc .card-column");
@@ -152,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  /* ------------------------------------- Articles page: category filter */
+  /* Articles page: category filter */
   document.querySelectorAll("[data-filter-menu]").forEach((menu) => {
     const label = menu.querySelector(".select-menu-button span");
     const posts = document.querySelectorAll(".articles-bloc .card-column");
@@ -171,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  /* ------------------------------------ Manufacturing page: accordion */
+  /* Manufacturing page: accordion */
   document.querySelectorAll(".accordion").forEach((button) => {
     button.addEventListener("click", function () {
       this.classList.toggle("active");
@@ -181,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  /* ------------------------ Course / training pages: enrolment popup */
+  /* Course / training pages: enrolment popup */
   const popup = document.querySelector(".popup");
   const openButton = document.querySelector(".register");
   if (popup && openButton) {
@@ -203,7 +201,40 @@ document.addEventListener("DOMContentLoaded", function () {
     popup.querySelector(".close-btn")?.addEventListener("click", closePopup);
   }
 
-  /* ---------------------------------------- Event page: countdown */
+  /* Forms: prefill and hide a field
+   * An element with data-prefill-field="<input id>" and data-prefill-value
+   * fills that input and hides its row, e.g. the training name in the Zoho
+   * registration form. The value is restored after the form's Reset button
+   * and set again on submit, so it is always sent. */
+  document.querySelectorAll("[data-prefill-field]").forEach((holder) => {
+    const fieldId = holder.dataset.prefillField;
+    const value = holder.dataset.prefillValue || "";
+
+    const apply = () => {
+      const field = document.getElementById(fieldId);
+      if (!field) return false;
+      field.value = value;
+
+      if (!field.dataset.prefilled) {
+        field.dataset.prefilled = "true";
+        // Zoho wraps each label + input in a .zcwf_row; hide the whole row.
+        (field.closest(".zcwf_row") || field).style.display = "none";
+        field.form?.addEventListener("reset", () => setTimeout(apply));
+        field.form?.addEventListener("submit", apply, true);
+      }
+      return true;
+    };
+
+    // The Zoho script may add the form after this runs; wait for it if so.
+    if (!apply()) {
+      const observer = new MutationObserver(() => {
+        if (apply()) observer.disconnect();
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+    }
+  });
+
+  /* Event page: countdown */
   const countdown = document.getElementById("saa");
   if (countdown && countdown.dataset.eventDate) {
     const target = new Date(countdown.dataset.eventDate.replace(" ", "T") + "T00:00:00").getTime();
