@@ -53,8 +53,7 @@
         </div>
 
 
-        /* The Zoho form's "Training" field (LEADCF8) is filled with this training's
-        name and hidden */
+        <!-- The Zoho form's "Training" field (LEADCF8) is filled with this training's name and hidden -->
         <?php ?>
         <div class="popup" data-prefill-field="LEADCF8" data-prefill-value="<?php echo esc_attr(get_post_field('post_title', get_queried_object_id())); ?>">
 
